@@ -16,11 +16,13 @@ class Question(models.Model):
         ordering="pub_date",
         description="Published recently?",
     )
+    # Redo
     def comparator(self):
         if self.pub_date.year==datetime.datetime.year:
             return self.question_text
         else:
-            return self.pub_date
+            return self.pub_date #
+
     class Meta:
         ordering = ('-pub_date', )
 
