@@ -25,6 +25,7 @@ from .models import FileItem, Album
 
 logger = logging.getLogger(__name__)
 
+
 class FilePolicyAPI(APIView):
     """
     This view is to get the AWS Upload Policy for our s3 bucket.
@@ -32,6 +33,7 @@ class FilePolicyAPI(APIView):
     Django backend. This is to include the FileItem instance in the path
     we will use within our bucket as you'll see below.
     """
+
     permission_classes = [permissions.IsAuthenticated]
     authentication_classes = [authentication.SessionAuthentication]
 
@@ -41,8 +43,8 @@ class FilePolicyAPI(APIView):
         and auth credientails. In our case, we'll use
         Session Authentication but any auth should work.
         """
-        filename_req = request.data.get('filename')
-        album_pk = request.data.get('album_pk', None)
+        filename_req = request.data.get("filename")
+        album_pk = request.data.get("album_pk", None)
         if album_pk:
             try:
                 album = Album.objects.get(id=album_pk)
@@ -55,7 +57,10 @@ class FilePolicyAPI(APIView):
         #                   aws_secret_access_key=AWS_SECRET_ACCESS_KEY)
 
         if not filename_req:
-            return Response({"message": "A filename is required"}, status=status.HTTP_400_BAD_REQUEST)
+            return Response(
+                {"message": "A filename is required"},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
 
         user = request.user
         username_str = str(request.user.username)
@@ -72,7 +77,6 @@ class FilePolicyAPI(APIView):
         file_obj.path = final_upload_path
         file_obj.extension = file_extension[1:]
         file_obj.save()
-
 
         # presigned_post = s3.generate_presigned_post(
         #     Bucket=AWS_BUCKET_NAME,
@@ -97,16 +101,16 @@ class FileUploadCompleteHandler(APIView):
     authentication_classes = [authentication.SessionAuthentication]
 
     def post(self, request, *args, **kwargs):
-        file_id = request.POST.get('file')
+        file_id = request.POST.get("file")
         data = {}
-        type_ = request.POST.get('fileType')
+        type_ = request.POST.get("fileType")
         if file_id:
             obj = FileItem.objects.get(id=int(file_id))
             obj.uploaded = True
             obj.type = type_
             obj.save()
-            data['id'] = obj.id
-            data['saved'] = True
+            data["id"] = obj.id
+            data["saved"] = True
         return Response(data, status=status.HTTP_200_OK)
 
 
@@ -115,45 +119,42 @@ def sign(key, msg):
 
 
 def getSignatureKey(key, date_stamp, regionName, serviceName):
-    kDate = sign(('AWS4' + key).encode('utf-8'), date_stamp)
+    kDate = sign(("AWS4" + key).encode("utf-8"), date_stamp)
     kRegion = sign(kDate, regionName)
     kService = sign(kRegion, serviceName)
-    kSigning = sign(kService, 'aws4_request')
+    kSigning = sign(kService, "aws4_request")
     return kSigning
 
 
 class GalleryList(GuestMixin, View):
     def get(self, request):
-        gallery_users = FileItem.objects.values('user').distinct()
+        gallery_users = FileItem.objects.values("user").distinct()
         galleries = []
         for user_dict in gallery_users:
-            user = User.objects.get(id=user_dict['user'])
+            user = User.objects.get(id=user_dict["user"])
             img_preview = random.choice(FileItem.objects.filter(user=user).all())
             preview = img_preview.gallery_thumbnail
-            gallery = {'owner': user,
-                       'preview': preview
-                       }
+            gallery = {"owner": user, "preview": preview}
             galleries.append(gallery)
 
-        return render(request, 'photos/galleries.html', {'galleries': galleries})
+        return render(request, "photos/galleries.html", {"galleries": galleries})
 
 
 class GalleryView(GuestMixin, View):
     def get(self, request, pk):
         user = User.objects.get(pk=pk)
-        images = FileItem.objects.filter(file_type='image', uploaded=True).filter(user=user)
+        images = FileItem.objects.filter(file_type="image", uploaded=True).filter(
+            user=user
+        )
         title = _("Image Gallery by {}").format(user.profile)
-        gallery = {'title': title,
-                   'images': images,
-                    'preview': images.first()
-                   }
-        return render(request, 'photos/gallery.html', {'gallery': gallery})
+        gallery = {"title": title, "images": images, "preview": images.first()}
+        return render(request, "photos/gallery.html", {"gallery": gallery})
 
 
 class AlbumNew(GuestMixin, CreateView):
     model = Album
-    fields = ('name', 'description')
-    template_name = 'photos/album_create.html'
+    fields = ("name", "description")
+    template_name = "photos/album_create.html"
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -161,11 +162,12 @@ class AlbumNew(GuestMixin, CreateView):
 
 
 class AlbumAdd(GuestMixin, DetailView):
-    template_name = 'photos/album_add.html'
+    template_name = "photos/album_add.html"
     model = Album
-    context_object_name = 'album'
+    context_object_name = "album"
+
 
 class AlbumView(GuestMixin, DetailView):
-    template_name = 'photos/gallery.html'
+    template_name = "photos/gallery.html"
     model = Album
-    context_object_name = 'gallery'
+    context_object_name = "gallery"

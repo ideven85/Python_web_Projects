@@ -13,49 +13,47 @@ class GuestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = (
-            'first_name',
-            'last_name',
-            'nickname',
-            'email',
-            'phone',
-            'is_attending',
-            'is_child',
-            'has_car',
-            'needs_van',
-            'dietary_restrictions',
-            'comes_from',
-            'invited_by',
-            'pk'
-            )
+            "first_name",
+            "last_name",
+            "nickname",
+            "email",
+            "phone",
+            "is_attending",
+            "is_child",
+            "has_car",
+            "needs_van",
+            "dietary_restrictions",
+            "comes_from",
+            "invited_by",
+            "pk",
+        )
+
 
 class UpdateGuestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = (
-            'nickname',
-            'phone',
-            'is_attending',
-            'is_child',
-            'has_car',
-            'dietary_restrictions',
-            'comes_from',
-            'invited_by',
-            'pk'
-            )
+            "nickname",
+            "phone",
+            "is_attending",
+            "is_child",
+            "has_car",
+            "dietary_restrictions",
+            "comes_from",
+            "invited_by",
+            "pk",
+        )
+
 
 class UserSerializer(serializers.ModelSerializer):
     profile = UpdateGuestSerializer()
+
     class Meta:
         model = User
-        fields = (
-            'first_name',
-            'last_name',
-            'email',
-            'profile'
-        )
+        fields = ("first_name", "last_name", "email", "profile")
 
     def update(self, instance, validated_data):
-        guest_data = validated_data.pop('profile')
+        guest_data = validated_data.pop("profile")
         user = super(UserSerializer, self).update(instance, validated_data)
         serializer = UpdateGuestSerializer(instance.profile, data=guest_data)
         serializer.is_valid()
@@ -66,41 +64,36 @@ class UserSerializer(serializers.ModelSerializer):
 class NewGuestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Guest
-        fields = (
-            'first_name',
-            'last_name',
-            'email',
-            'is_attending'
-        )
+        fields = ("first_name", "last_name", "email", "is_attending")
 
 
 class RsvpSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = (
-            'first_name',
-            'last_name',
-            'is_attending',
-            'is_child',
-            'has_car',
-            'needs_van',
-            'dietary_restrictions',
-            'comes_from',
-            'id',
+            "first_name",
+            "last_name",
+            "is_attending",
+            "is_child",
+            "has_car",
+            "needs_van",
+            "dietary_restrictions",
+            "comes_from",
+            "id",
         )
-        read_only_fields = ('first_name', 'last_name', 'id')
+        read_only_fields = ("first_name", "last_name", "id")
 
 
 class TokenSerializer(serializers.ModelSerializer):
     class Meta:
         model = PushTokens
-        fields = ('token', )
+        fields = ("token",)
 
 
 class MessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = MessageFromGuest
-        fields = ('message', )
+        fields = ("message",)
 
 
 class LoginSerializer(serializers.Serializer):
@@ -110,17 +103,17 @@ class LoginSerializer(serializers.Serializer):
 
     def validate_access_code(self, code):
         access_code = code.lower()
-        if len(access_code.split('-')) != 3:
-            raise serializers.ValidationError('Wrong access code format')
-        a, b, user_pk = code.split('-')
+        if len(access_code.split("-")) != 3:
+            raise serializers.ValidationError("Wrong access code format")
+        a, b, user_pk = code.split("-")
         user_pk = base36_to_int(user_pk)
         try:
             user = User.objects.get(pk=user_pk)
         except User.DoesNotExist:
-            raise serializers.ValidationError('Secret Code not Valid')
+            raise serializers.ValidationError("Secret Code not Valid")
 
         if not login_token_generator.check_token(user, code):
-            raise serializers.ValidationError('Access Code Expired. Require a New one.')
+            raise serializers.ValidationError("Access Code Expired. Require a New one.")
         return user_pk
 
 
@@ -138,13 +131,13 @@ class RequestAccessCodeSerializer(serializers.Serializer):
 class APITokenSerializer(serializers.ModelSerializer):
     class Meta:
         model = Token
-        fields = ('key', )
+        fields = ("key",)
 
 
 class PhotoSerializer(serializers.ModelSerializer):
     class Meta:
         model = FileItem
-        fields = ('name', )
+        fields = ("name",)
 
 
 class PhotoConfirmSerializer(serializers.Serializer):
@@ -154,4 +147,4 @@ class PhotoConfirmSerializer(serializers.Serializer):
 class NewsSerializer(serializers.ModelSerializer):
     class Meta:
         model = News
-        fields = ('title', 'message', 'published_on', 'pk')
+        fields = ("title", "message", "published_on", "pk")

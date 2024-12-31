@@ -7,13 +7,11 @@ from requests.exceptions import ConnectionError
 from requests.exceptions import HTTPError
 from backend.models import PushTokens
 
+
 # Basic arguments. You should extend this function with the push features you
 # want to use, or simply pass in a `PushMessage` object.
 def send_push_message(token, title, message, extra=None):
-    response = PushClient().publish(
-        PushMessage(to=token,
-                    body=message,
-                    data=extra))
+    response = PushClient().publish(PushMessage(to=token, body=message, data=extra))
     try:
         response.validate_response()
     except DeviceNotRegisteredError:

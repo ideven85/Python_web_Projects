@@ -6,18 +6,26 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ourwedding', '0006_auto_20190926_2023'),
+        ("ourwedding", "0006_auto_20190926_2023"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='profile',
-            name='post_wedding',
-            field=models.BooleanField(default=False, help_text='Are you attending the post-wedding?', verbose_name='post wedding'),
+            model_name="profile",
+            name="post_wedding",
+            field=models.BooleanField(
+                default=False,
+                help_text="Are you attending the post-wedding?",
+                verbose_name="post wedding",
+            ),
         ),
         migrations.AddField(
-            model_name='profile',
-            name='pre_wedding',
-            field=models.BooleanField(default=False, help_text='Are you attending the pre-wedding?', verbose_name='pre wedding'),
+            model_name="profile",
+            name="pre_wedding",
+            field=models.BooleanField(
+                default=False,
+                help_text="Are you attending the pre-wedding?",
+                verbose_name="pre wedding",
+            ),
         ),
     ]

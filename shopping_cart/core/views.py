@@ -6,13 +6,16 @@ from core.models import Item
 
 # Create your views here.
 
+
 class HomePageView(TemplateView):
-    template_name = 'home.html'
+    template_name = "home.html"
+
 
 class ItemListView(ListView):
     model = Item
-    template_name = 'items_list.html'
+    template_name = "items_list.html"
+
 
 class ItemDetailView(DetailView):
     model = Item
-    template_name = 'item_detail.html'
+    template_name = "item_detail.html"

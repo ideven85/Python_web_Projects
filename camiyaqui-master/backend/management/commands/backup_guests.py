@@ -14,6 +14,11 @@ class Command(BaseCommand):
         data = list(User.objects.values())
         jsonfile = StringIO()
         jsonfile.write(json.dumps(data, cls=DjangoJSONEncoder))
-        message = EmailMessage("Exported Guests", "Here is the backup of the guests", settings.EMAIL_FROM, [settings.EMAIL_FROM])
-        message.attach('guests.csv', jsonfile.getvalue(), 'text/csv')
+        message = EmailMessage(
+            "Exported Guests",
+            "Here is the backup of the guests",
+            settings.EMAIL_FROM,
+            [settings.EMAIL_FROM],
+        )
+        message.attach("guests.csv", jsonfile.getvalue(), "text/csv")
         message.send()

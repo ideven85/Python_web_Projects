@@ -9,17 +9,31 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('backend', '0003_sentmessages_sent_to'),
+        ("backend", "0003_sentmessages_sent_to"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Visits',
+            name="Visits",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('timestamps', models.DateTimeField(auto_now_add=True)),
-                ('page', models.CharField(max_length=255)),
-                ('guest', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("timestamps", models.DateTimeField(auto_now_add=True)),
+                ("page", models.CharField(max_length=255)),
+                (
+                    "guest",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
     ]

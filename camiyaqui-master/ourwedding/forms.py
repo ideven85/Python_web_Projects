@@ -12,18 +12,20 @@ class SecretCodeForm(forms.Form):
     next = forms.CharField(required=False, max_length=255)
 
     def clean_access_code(self):
-        access_code = self.cleaned_data.get('access_code', '').lower()
-        if len(access_code.split('-')) != 3:
-            raise forms.ValidationError(_('Wrong access code format'))
+        access_code = self.cleaned_data.get("access_code", "").lower()
+        if len(access_code.split("-")) != 3:
+            raise forms.ValidationError(_("Wrong access code format"))
 
-        a, b, user_pk = self.cleaned_data['access_code'].split('-')
+        a, b, user_pk = self.cleaned_data["access_code"].split("-")
         user_pk = base36_to_int(user_pk)
         try:
             user = User.objects.get(pk=user_pk)
         except User.DoesNotExist:
-            raise forms.ValidationError(_('Secret Code not Valid'))
-        if not login_token_generator.check_token(user, self.cleaned_data.get('access_code')):
-            raise forms.ValidationError(_('Access Code Expired. Require a New one.'))
+            raise forms.ValidationError(_("Secret Code not Valid"))
+        if not login_token_generator.check_token(
+            user, self.cleaned_data.get("access_code")
+        ):
+            raise forms.ValidationError(_("Access Code Expired. Require a New one."))
 
         return user_pk
 
@@ -33,8 +35,8 @@ class RequestCodeForm(forms.Form):
 
 
 class CustomSlider(forms.CheckboxInput):
-    input_type = 'checkbox'
-    template_name = 'widgets/slider.html'
+    input_type = "checkbox"
+    template_name = "widgets/slider.html"
 
     def __init__(self, *args, **kwargs):
         super(CustomSlider, self).__init__(*args, **kwargs)
@@ -43,59 +45,75 @@ class CustomSlider(forms.CheckboxInput):
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ('phone', 'language', 'comes_from', 'dietary_restrictions', 'is_attending', 'has_car', 'needs_van')
+        fields = (
+            "phone",
+            "language",
+            "comes_from",
+            "dietary_restrictions",
+            "is_attending",
+            "has_car",
+            "needs_van",
+        )
         widgets = {
-            'dietary_restrictions': forms.TextInput(),
-            'comes_from': forms.TextInput(),
-            'is_attending': CustomSlider(),
-            'has_car': CustomSlider(),
-            'needs_van': CustomSlider()
+            "dietary_restrictions": forms.TextInput(),
+            "comes_from": forms.TextInput(),
+            "is_attending": CustomSlider(),
+            "has_car": CustomSlider(),
+            "needs_van": CustomSlider(),
         }
 
 
 class GuestEditForm(forms.ModelForm):
-    """Form used by one guest to edit other guest's information.
-    """
+    """Form used by one guest to edit other guest's information."""
+
     class Meta:
         model = Profile
-        fields = ('is_attending', 'is_child')
+        fields = ("is_attending", "is_child")
         widgets = {
-            'is_attending': CustomSlider(),
-            'is_child': CustomSlider(),
+            "is_attending": CustomSlider(),
+            "is_child": CustomSlider(),
         }
 
     def clean_first_name(self):
-        instance = getattr(self, 'instance', None)
+        instance = getattr(self, "instance", None)
         if instance and instance.id:
             return instance.first_name
         else:
-            return self.cleaned_data['first_name']
+            return self.cleaned_data["first_name"]
 
 
 class GuestCreateForm(forms.ModelForm):
-    """Form used by a guest to add a new guest.
-    """
+    """Form used by a guest to add a new guest."""
+
     class Meta:
         model = Guest
-        fields = ('first_name', 'last_name', 'email', 'phone', 'dietary_restrictions', 'is_attending', 'is_child')
+        fields = (
+            "first_name",
+            "last_name",
+            "email",
+            "phone",
+            "dietary_restrictions",
+            "is_attending",
+            "is_child",
+        )
 
         widgets = {
-            'dietary_restrictions': forms.TextInput(),
-            'is_child': CustomSlider(),
-            'is_attending': CustomSlider(),
+            "dietary_restrictions": forms.TextInput(),
+            "is_child": CustomSlider(),
+            "is_attending": CustomSlider(),
         }
 
 
 class ContactForm(forms.ModelForm):
     class Meta:
         model = MessageFromGuest
-        fields = ('message', )
+        fields = ("message",)
 
 
 class RegisterForm(forms.ModelForm):
     class Meta:
         model = Guest
-        fields = ('first_name', 'last_name', 'email')
+        fields = ("first_name", "last_name", "email")
         widgets = {
-            'email': forms.EmailInput(),
+            "email": forms.EmailInput(),
         }

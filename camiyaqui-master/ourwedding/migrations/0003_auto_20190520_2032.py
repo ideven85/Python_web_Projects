@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('ourwedding', '0002_auto_20190520_2031'),
+        ("ourwedding", "0002_auto_20190520_2031"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='profile',
-            name='has_car',
-            field=models.BooleanField(default=False, help_text='Do you have a car?', verbose_name='Car'),
+            model_name="profile",
+            name="has_car",
+            field=models.BooleanField(
+                default=False, help_text="Do you have a car?", verbose_name="Car"
+            ),
         ),
     ]

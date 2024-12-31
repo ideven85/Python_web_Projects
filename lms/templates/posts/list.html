@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %} Post Lists {% endblock %}
+{% block content %}
+    <h1>My blogs</h1>
+    {% for post in posts %}
+        <h2><a href="{% url 'core:post_detail' post.id %}" target="_self">{{ post.title }}</a></h2>
+        <p class="date">
+        Published by {{ post.author.name }} on {{ post.publish }}
+        </p>
+        <p>{{ post.body|truncatewords:30|linebreaks }}</p>
+    {% endfor %}
+{% endblock %}

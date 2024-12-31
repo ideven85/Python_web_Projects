@@ -6,7 +6,7 @@ from django.utils.http import int_to_base36, base36_to_int
 
 
 class LoginTokenGenerator:
-    key_salt = 'LoginTokenGenerator'
+    key_salt = "LoginTokenGenerator"
     secret = settings.SECRET_KEY
 
     def check_token(self, user, token):
@@ -14,7 +14,7 @@ class LoginTokenGenerator:
             return False
 
         try:
-            ts_b36, _, us_b36 = token.split('-')
+            ts_b36, _, us_b36 = token.split("-")
         except ValueError:
             return False
 
@@ -26,7 +26,7 @@ class LoginTokenGenerator:
         if not constant_time_compare(self._make_token_with_timestamp(user, ts), token):
             return False
 
-        if (self._num_days(date.today())-ts) > settings.LOGIN_TOKEN_TIMEOUT_DAYS:
+        if (self._num_days(date.today()) - ts) > settings.LOGIN_TOKEN_TIMEOUT_DAYS:
             return False
 
         return True
@@ -39,9 +39,7 @@ class LoginTokenGenerator:
         us_b36 = int_to_base36(user.pk)
 
         hash_string = salted_hmac(
-            self.key_salt,
-            self._make_hash_value(user, timestamp),
-            secret=self.secret
+            self.key_salt, self._make_hash_value(user, timestamp), secret=self.secret
         ).hexdigest()[::4]
 
         return "%s-%s-%s" % (ts_b36, hash_string, us_b36)

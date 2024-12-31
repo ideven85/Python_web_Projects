@@ -10,52 +10,111 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('ourwedding', '0001_initial'),
+        ("ourwedding", "0001_initial"),
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='InternalMessage',
+            name="InternalMessage",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('timestamp', models.DateTimeField(auto_now_add=True)),
-                ('message', models.TextField()),
-                ('opened', models.BooleanField(default=False)),
-                ('opened_on', models.DateTimeField(default=None, null=True)),
-                ('notified', models.BooleanField(default=False)),
-                ('notified_on', models.DateTimeField(default=None, null=True)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("timestamp", models.DateTimeField(auto_now_add=True)),
+                ("message", models.TextField()),
+                ("opened", models.BooleanField(default=False)),
+                ("opened_on", models.DateTimeField(default=None, null=True)),
+                ("notified", models.BooleanField(default=False)),
+                ("notified_on", models.DateTimeField(default=None, null=True)),
             ],
         ),
         migrations.CreateModel(
-            name='Message',
+            name="Message",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=255)),
-                ('slug', models.SlugField(max_length=255, unique=True)),
-                ('language', models.CharField(choices=[('es', 'Spanish'), ('en', 'English')], max_length=2)),
-                ('subject', models.CharField(max_length=255)),
-                ('template_html', models.TextField(blank=True, null=True)),
-                ('template_txt', models.TextField(blank=True)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=255)),
+                ("slug", models.SlugField(max_length=255, unique=True)),
+                (
+                    "language",
+                    models.CharField(
+                        choices=[("es", "Spanish"), ("en", "English")], max_length=2
+                    ),
+                ),
+                ("subject", models.CharField(max_length=255)),
+                ("template_html", models.TextField(blank=True, null=True)),
+                ("template_txt", models.TextField(blank=True)),
             ],
         ),
         migrations.CreateModel(
-            name='SentMessages',
+            name="SentMessages",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('date_sent', models.DateTimeField(auto_now_add=True)),
-                ('text', models.TextField()),
-                ('guest', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='ourwedding.Profile')),
-                ('message', models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to='backend.Message')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("date_sent", models.DateTimeField(auto_now_add=True)),
+                ("text", models.TextField()),
+                (
+                    "guest",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        to="ourwedding.Profile",
+                    ),
+                ),
+                (
+                    "message",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.SET_NULL,
+                        to="backend.Message",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='PushTokens',
+            name="PushTokens",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('timestamp', models.DateTimeField(auto_now_add=True)),
-                ('token', models.CharField(max_length=255)),
-                ('user', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='push_token', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("timestamp", models.DateTimeField(auto_now_add=True)),
+                ("token", models.CharField(max_length=255)),
+                (
+                    "user",
+                    models.ForeignKey(
+                        null=True,
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="push_token",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
     ]

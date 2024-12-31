@@ -6,18 +6,31 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0005_auto_20190526_0657'),
+        ("backend", "0005_auto_20190526_0657"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='News',
+            name="News",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('language', models.CharField(choices=[('es', 'Spanish'), ('en', 'English')], max_length=2)),
-                ('title', models.CharField(max_length=120)),
-                ('message', models.TextField()),
-                ('published_on', models.DateTimeField(auto_now_add=True)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "language",
+                    models.CharField(
+                        choices=[("es", "Spanish"), ("en", "English")], max_length=2
+                    ),
+                ),
+                ("title", models.CharField(max_length=120)),
+                ("message", models.TextField()),
+                ("published_on", models.DateTimeField(auto_now_add=True)),
             ],
         ),
     ]

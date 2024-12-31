@@ -10,27 +10,27 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument(
-            '--repeat',
-            action='store_true',
-            dest='send',
+            "--repeat",
+            action="store_true",
+            dest="send",
             default=False,
-            help="Send again to all contacts"
+            help="Send again to all contacts",
         )
         parser.add_argument(
-            'msg',
+            "msg",
             help="Mark as sent",
             type=int,
         )
         parser.add_argument(
-            '--reset',
-            action='store_true',
-            dest='reset',
+            "--reset",
+            action="store_true",
+            dest="reset",
             default=False,
-            help="Reset sent flags"
+            help="Reset sent flags",
         )
 
     def handle(self, *args, **options):
-        msg = Message.objects.get(pk=options['msg'])
+        msg = Message.objects.get(pk=options["msg"])
         guests = Profile.objects.filter(language=msg.language)
         for guest in guests:
             msg.send(guest, {})

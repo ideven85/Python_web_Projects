@@ -97,4 +97,4 @@ def post_comment(request, post_id):
 #         post.author = request.user
 #         post.save()
 #     return render(request,'posts/add_post.html',{'post':post,'form': form})
-#class CreatePostView(CreateView,LoginRequiredMixin):
+# class CreatePostView(CreateView,LoginRequiredMixin):

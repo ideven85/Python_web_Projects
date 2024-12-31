@@ -9,27 +9,47 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('photos', '0001_initial'),
+        ("photos", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='fileitem',
-            name='extension',
+            model_name="fileitem",
+            name="extension",
             field=models.CharField(blank=True, max_length=10, null=True),
         ),
         migrations.CreateModel(
-            name='Comment',
+            name="Comment",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('comment', models.TextField()),
-                ('timestamp', models.DateTimeField(auto_now_add=True)),
-                ('foto', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='photos.FileItem')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("comment", models.TextField()),
+                ("timestamp", models.DateTimeField(auto_now_add=True)),
+                (
+                    "foto",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="photos.FileItem",
+                    ),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'ordering': ['-timestamp'],
-                'get_latest_by': '-timestamp',
+                "ordering": ["-timestamp"],
+                "get_latest_by": "-timestamp",
             },
         ),
     ]

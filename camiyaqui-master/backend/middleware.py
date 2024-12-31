@@ -10,9 +10,9 @@ class PageViewMiddleware:
     def __call__(self, request):
         response = self.get_response(request)
 
-        if request.session.get('guest'):
+        if request.session.get("guest"):
             Visits.objects.create(
-                guest=User.objects.get(pk=request.session.get('guest')),
+                guest=User.objects.get(pk=request.session.get("guest")),
                 page=request.path,
             )
 

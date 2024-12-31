@@ -7,7 +7,7 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from core.models import ItemImage
 
-THUMBNAIL_SIZE = (300,300)
+THUMBNAIL_SIZE = (300, 300)
 
 logger = logging.getLogger(__name__)
 # def load_greyscale_image(filename):
@@ -50,7 +50,8 @@ logger = logging.getLogger(__name__)
 #         out.save(filename, mode)
 #     out.close()
 
-@receiver(pre_save,sender=ItemImage)
+
+@receiver(pre_save, sender=ItemImage)
 def generate_thumbnail(sender, instance, **kwargs):
     logger.info(
         "Generating thumbnail for product %d",
@@ -58,7 +59,7 @@ def generate_thumbnail(sender, instance, **kwargs):
     )
     image = Image.open(instance.item_image)
     image = image.convert("L")
-    image.thumbnail(THUMBNAIL_SIZE,Image.DEFAULT_STRATEGY)
+    image.thumbnail(THUMBNAIL_SIZE, Image.DEFAULT_STRATEGY)
     temp_thumb = BytesIO()
     image.save(temp_thumb, "JPEG")
     temp_thumb.seek(0)

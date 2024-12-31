@@ -1,17 +1,18 @@
 from our_wedding.settings.common import *
-#from camiyaqui.settings.aws_credentials import *
+
+# from camiyaqui.settings.aws_credentials import *
 
 # EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 # EMAIL_FILE_PATH = os.path.join(BASE_DIR, '../../emails')
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'camiaqui',
-        'USER': 'deven',
-        'PASSWORD': '728000'
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "camiaqui",
+        "USER": "deven",
+        "PASSWORD": "728000",
     }
 }
 

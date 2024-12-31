@@ -6,16 +6,15 @@ from django.utils.translation import gettext as _, _trans as LANGUAGE_SESSION_KE
 
 
 class GuestMixin(AccessMixin):
-    login_url = reverse_lazy('guest-login')
-    permission_denied_message = _('Please login first')
-    redirect_field_name = 'next'
+    login_url = reverse_lazy("guest-login")
+    permission_denied_message = _("Please login first")
+    redirect_field_name = "next"
 
     def dispatch(self, request, *args, **kwargs):
-        if not request.session.get('guest'):
+        if not request.session.get("guest"):
             return self.handle_no_permission()
-        user = User.objects.get(pk=request.session.get('guest'))
+        user = User.objects.get(pk=request.session.get("guest"))
         user.profile.last_login = now()
         user.save()
         self.request.session[LANGUAGE_SESSION_KEY] = user.profile.language
         return super().dispatch(request, *args, **kwargs)
-

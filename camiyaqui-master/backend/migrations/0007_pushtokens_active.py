@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('backend', '0006_news'),
+        ("backend", "0006_news"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='pushtokens',
-            name='active',
+            model_name="pushtokens",
+            name="active",
             field=models.BooleanField(default=True),
         ),
     ]

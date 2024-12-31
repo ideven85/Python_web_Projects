@@ -4,7 +4,7 @@ import json
 flags_dir = os.path.join("flags", "1x1")
 
 files = []
-for (dirpath, dirnames, filenames) in os.walk(flags_dir):
+for dirpath, dirnames, filenames in os.walk(flags_dir):
     files.extend(filenames)
     break
 

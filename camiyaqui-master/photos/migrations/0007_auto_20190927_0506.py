@@ -9,24 +9,43 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('photos', '0006_likes'),
+        ("photos", "0006_likes"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Album',
+            name="Album",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=50, verbose_name='name')),
-                ('description', models.TextField(verbose_name='description')),
-                ('creation_date', models.DateTimeField(auto_now_add=True)),
-                ('last_updated', models.DateTimeField(default=None, null=True)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=50, verbose_name="name")),
+                ("description", models.TextField(verbose_name="description")),
+                ("creation_date", models.DateTimeField(auto_now_add=True)),
+                ("last_updated", models.DateTimeField(default=None, null=True)),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
         migrations.AddField(
-            model_name='fileitem',
-            name='album',
-            field=models.ForeignKey(default=None, null=True, on_delete=django.db.models.deletion.SET_NULL, to='photos.Album'),
+            model_name="fileitem",
+            name="album",
+            field=models.ForeignKey(
+                default=None,
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                to="photos.Album",
+            ),
         ),
     ]

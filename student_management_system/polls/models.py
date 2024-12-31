@@ -5,7 +5,6 @@ from django.utils import timezone
 from django.contrib import admin
 
 
-
 # Django Documentation
 class Question(models.Model):
     question_text = models.CharField(max_length=120)
@@ -18,13 +17,13 @@ class Question(models.Model):
     )
     # Redo
     def comparator(self):
-        if self.pub_date.year==datetime.datetime.year:
+        if self.pub_date.year == datetime.datetime.year:
             return self.question_text
         else:
-            return self.pub_date #
+            return self.pub_date  #
 
     class Meta:
-        ordering = ('-pub_date', )
+        ordering = ("-pub_date",)
 
     def __str__(self):
         return self.question_text
@@ -35,16 +34,16 @@ class Question(models.Model):
 
 
 class Choices(models.Model):
-    question = models.ForeignKey(Question,on_delete=models.CASCADE, related_name='Question')
+    question = models.ForeignKey(
+        Question, on_delete=models.CASCADE, related_name="Question"
+    )
     choice_text = models.CharField(max_length=120)
     votes = models.IntegerField(default=0)
 
-
     class Meta:
-        ordering = ('-votes', )
-        verbose_name='Choices'
-        verbose_name_plural='Choices'
+        ordering = ("-votes",)
+        verbose_name = "Choices"
+        verbose_name_plural = "Choices"
 
     def __str__(self):
         return self.choice_text
-

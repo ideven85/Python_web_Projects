@@ -1,37 +1,49 @@
-#from django.contrib.auth.models import User
-#from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.db import models
 
+
 class Course(models.Model):
-    course_name = models.CharField(max_length=120,null=False,unique=True)
-    course_number = models.PositiveIntegerField(db_index=True,default=1)
-    department = models.CharField(max_length=200,default='CS')
+    course_name = models.CharField(max_length=120, null=False, unique=True)
+    course_number = models.PositiveIntegerField(db_index=True, default=1)
+    department = models.CharField(max_length=200, default="CS")
     course_credits = models.IntegerField(default=2)
     num_lectures = models.PositiveIntegerField()
-    instructor_name = models.CharField(max_length=120,null=False)
+    instructor_name = models.CharField(max_length=120, null=False)
     running = models.BooleanField(default=True)
 
     def __str__(self):
         return self.course_name
 
+
 class Prerequisites(models.Model):
-    prerequisites=models.ForeignKey(to=Course,related_name='Courses_Required',null=True,blank=True,on_delete=models.CASCADE)
+    prerequisites = models.ForeignKey(
+        to=Course,
+        related_name="Courses_Required",
+        null=True,
+        blank=True,
+        on_delete=models.CASCADE,
+    )
+
+
 class Student(models.Model):
-    student_name=models.CharField(max_length=120,null=False)
-    roll_number = models.CharField(max_length=20,unique=True,db_index=True)
-    semester = models.CharField(max_length=10,default='I')
-    major = models.CharField(max_length=20,default='CS')
+    student_name = models.CharField(max_length=120, null=False)
+    roll_number = models.CharField(max_length=20, unique=True, db_index=True)
+    semester = models.CharField(max_length=10, default="I")
+    major = models.CharField(max_length=20, default="CS")
 
     courses_enrolled = models.ManyToManyField(to=Course)
-
 
     # @property
     # def name(self):
     #     return self.student_name.first_name + " " +self.student_name.last_name
     class Meta:
-        ordering = ['roll_number','semester']
+        ordering = ["roll_number", "semester"]
+
     def __str__(self):
         return self.student_name
+
+
 #
 # from django.db.models.signals import post_save
 # from django.conf import settings

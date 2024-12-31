@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ post.title }} {% endblock %}
+
+{% block content %}
+    <h1>{{ post.title }}</h1>
+    <p class="date">Published by {{ post.author }}</p>
+    <p>{{ post.body|linebreaks }}</p>
+    <p>No need to remember template syntax, will be more helpful just building APIs</p>
+    <a href="{% url 'core:post_list' %}" target="_parent">Back to All posts</a>
+
+
+{% endblock %}
