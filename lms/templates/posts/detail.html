@@ -3,10 +3,38 @@
 {% block title %} {{ post.title }} {% endblock %}
 
 {% block content %}
-    <h1>{{ post.title }}</h1>
-    <p class="date">Published by {{ post.author }}</p>
-    <p>{{ post.body|linebreaks }}</p>
+    <div class="container content-space-t-3 content-space-t-lg-4 content-space-b-2">
+    <div class="w-lg-65 mx-lg-auto">
+        <div class="mb-4">
+          <h1 class="h2">{{ post.title}}</h1>
+        </div>
+        <p class="date">Published by {{ post.author }}</p>
+              <div class="w-lg-65 mx-lg-auto">
+
+        <p>{{ post.body|linebreaks }}</p>
+              </div>
+    </div>
+    {% with  comments.count as total_comments %}
+        <h2>{{ total_comments }} comment {{ total_comments|pluralize }} </h2>
+
+    {% endwith %}
+    {% for comment in comments %}
+
+        <div class="comment">
+        <p class="info">Comment {{ forloop.counter  }} by {{ comment.name }}</p>
+        <span>{{ comment.body|linebreaks }}</span>
+
+
+        </div>
+         {% empty %}
+        <p>There are no comments yet</p>
+
+    {% endfor %}
+
     <p>No need to remember template syntax, will be more helpful just building APIs</p>
+
+    {% include "posts/include/comment_form.html" %}
+
     <a href="{% url 'core:post_list' %}" target="_parent">Back to All posts</a>
 
 
