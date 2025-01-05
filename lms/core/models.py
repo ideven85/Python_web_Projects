@@ -3,11 +3,12 @@ import uuid
 from django.conf import settings
 
 # from django.conf.global_settings import AUTH_USER_MODEL
-#from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+# from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.models import PermissionsMixin
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
-#from django.db.models.functions import Now
+
+# from django.db.models.functions import Now
 from django.http import Http404
 from django.urls import reverse
 from django.utils import timezone
@@ -60,23 +61,22 @@ class Post(BaseModel):
         ordering = ["-publish"]
 
     def get_absolute_url(self):
-        return reverse('core:post_detail',args=[self.id])
+        return reverse("core:post_detail", args=[self.id])
 
     def __str__(self):
         return self.title
 
+
 class Comment(BaseModel):
-    post = models.ForeignKey(to=Post,on_delete=models.CASCADE,related_name='comments')
+    post = models.ForeignKey(to=Post, on_delete=models.CASCADE, related_name="comments")
     name = models.CharField(max_length=128)
     email = models.EmailField()
     body = models.TextField()
     active = models.BooleanField()
 
     class Meta:
-        ordering = ['created']
-        indexes = [
-            models.Index(fields=['created'])
-        ]
+        ordering = ["created"]
+        indexes = [models.Index(fields=["created"])]
 
     def __str__(self):
         return f"Commented by {self.name} on {self.post}"
