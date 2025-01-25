@@ -40,7 +40,7 @@ def post_comment(request, post_id):
     form = CommentForm(data=request.POST)
     if form.is_valid():
         comment = form.save(commit=False)
-        comment.post = post
+        comment.post = post # Registering comment foreign key to post?
         comment.save()
     return render(
         request, "posts/comment.html", {"post": post, "form": form, "comment": comment}

@@ -2,7 +2,8 @@ from django.contrib.auth.base_user import BaseUserManager, AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from django.db import models
 
-from core.models import BaseManager, BaseModel
+from core.models import BaseModel
+from core.managers import BaseManager
 
 
 # Create your models here.
@@ -49,8 +50,11 @@ class User(BaseModel, AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     def __str__(self):
-        return f"{self.email}"
+        return self.name if self.name else self.email
 
     @property
     def name(self):
         return self.first_name + " " + self.last_name
+
+    def get_email(self):
+        return self.email
