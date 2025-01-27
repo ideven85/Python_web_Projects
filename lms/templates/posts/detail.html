@@ -15,7 +15,7 @@
               </div>
     </div>
     {% with  comments.count as total_comments %}
-        <h2>{{ total_comments }} comment {{ total_comments|pluralize }} </h2>
+        <h2>{{ total_comments }} comment{{ total_comments|pluralize }} </h2>
 
     {% endwith %}
     {% for comment in comments %}
@@ -35,7 +35,8 @@
 
     {% include "posts/include/comment_form.html" %}
 
-    <a href="{% url 'core:post_list' %}" target="_parent">Back to All posts</a>
+    <a href="{% url 'core:post_list' %}" target="_self">Back to All posts</a>
+
 
 
 {% endblock %}

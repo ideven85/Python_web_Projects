@@ -6,11 +6,11 @@ from core.user import models
 
 # Register your models here.
 
-
+#todo Need to modify admin interface to display both email and username fields.. building own is a waste of time..
 @admin.register(models.User)
 class UserAdmin(DjangoUserAdmin):
     fieldsets = (
-        (None, {"fields": ("email", "password")}),
+        (None, {"fields": ("email", "username","password")}),
         (
             "Personal info",
             {"fields": ("first_name", "last_name")},
@@ -38,6 +38,6 @@ class UserAdmin(DjangoUserAdmin):
             },
         ),
     )
-    list_display = ["email", "first_name", "last_name", "is_staff"]
+    list_display = ["email", "username", "first_name", "last_name", "is_staff"]
     search_fields = ("email", "first_name", "last_name")
     ordering = ("email",)

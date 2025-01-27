@@ -43,7 +43,7 @@ class Post(BaseModel):
         to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="posts"
     )
     slug = models.SlugField(max_length=128)
-    body = models.TextField() #summarising post
+    body = models.TextField()  # summarising post
 
     publish = models.DateTimeField(default=timezone.now)
     status = models.CharField(choices=Status, max_length=2, default=Status.DRAFT)
@@ -65,7 +65,7 @@ class Comment(BaseModel):
     post = models.ForeignKey(to=Post, on_delete=models.CASCADE, related_name="comments")
     name = models.CharField(max_length=128)
     email = models.EmailField()
-    body = models.TextField() # classify comment...? using transformers...
+    body = models.TextField()  # classify comment...? using transformers...
     active = models.BooleanField()
 
     class Meta:

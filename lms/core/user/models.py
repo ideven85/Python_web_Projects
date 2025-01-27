@@ -23,7 +23,7 @@ class UserManager(BaseManager, BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, username, email, password=None, **kwargs):
+    def create_superuser(self, username, email, password, **kwargs):
         if not username:
             raise TypeError("Username must be provided")
         if not email:
@@ -40,13 +40,14 @@ class UserManager(BaseManager, BaseUserManager):
 class User(BaseModel, AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    username = models.CharField(db_index=True, max_length=128, unique=True)
+    username = models.CharField(db_index=True, max_length=128, unique=True,null=False)
     email = models.EmailField(db_index=True, unique=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["username"]
+
     objects = UserManager()
 
     def __str__(self):
