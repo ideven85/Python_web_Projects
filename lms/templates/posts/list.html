@@ -1,13 +1,84 @@
 {% extends 'base.html' %}
 {% block title %} Post Lists {% endblock %}
 {% block content %}
-    <h1>My blogs</h1>
+    <div class="container content-space-2 content-space-lg-3">
+        <div class="row justify-content-lg-between">
+            <div class="col-lg-8 mb-10 mb-lg-0">
+                <div class="d-grid gap-7 mb-7">
+
+
+
+
     {% for post in posts %}
-        <h2><a href="{{ post.get_absolute_url }}" target="_blank">{{ post.title }}</a></h2>
-        <p class="date">
-        Published by {{ post.author.name }} on {{ post.publish }}
-        </p>
-        <p>{{ post.body|truncatewords:30|linebreaks }}</p>
+        <div class="card card-flush card-stretched-vertical">
+            <div class="row">
+                <div class="col-sm-5">
+                    <img class="card-img" src="/static/img/400x500/img7.jpg" alt="Image Description">
+                </div>
+                <!-- End Col -->
+
+                <div class="col-sm-7">
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <div class="mb-2">
+                        Tags:
+                            {% for tag in post.tags.all %}
+                            <a class="card-link" href="{% url 'core:post_list_by_tag' tag.slug %}">{{ tag.name }}</a>
+
+
+                                {% endfor %}
+                        </div>
+
+                        <h3 class="card-title">
+                            <a class="text-dark" href="{{ post.get_absolute_url }}" target="_blank">{{ post.title }}</a>
+                        </h3>
+
+                        <p class="card-text">{{ post.body|truncatewords:30}}</p>
+
+                        <!-- Card Footer -->
+                        <div class="card-footer">
+                            <div class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <a class="avatar avatar-circle" href="#">
+                                        <img class="avatar-img" src="/static/img/160x160/img3.jpg" alt="Image Description">
+                                    </a>
+                                </div>
+
+                                <div class="flex-grow-1 ms-3">
+                                    <a class="card-link link-dark" href="#">{{ post.author }}</a>
+                                    <p class="card-text small">{{ post.publish}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Card Footer -->
+                    </div>
+                    <!-- End Card Body -->
+                </div>
+                <!-- End Col -->
+            </div>
+            <!-- End Row -->
+        </div>
+
     {% endfor %}
+                    <div id="stickyBlockEndPoint"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <!-- End Pagination -->
+
+        <!-- End Col -->
+
+
+        <!-- End Col -->
+
+    <!-- End Row -->
+
+    <!-- End Card Grid -->
+
+
     {% include "pagination.html" with page=posts %}
+
+
 {% endblock %}

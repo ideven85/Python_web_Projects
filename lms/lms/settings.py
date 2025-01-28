@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "taggit",
     "core",
     "core.user",
+
+
 ]
 AUTH_USER_MODEL = "core_user.User"
 LOGIN_REDIRECT_URL = "/"

@@ -14,6 +14,13 @@
         <p>{{ post.body|linebreaks }}</p>
               </div>
     </div>
+    <h2>Similar posts</h2>
+    {% for post in similar_posts %}
+        <p><a href="{{ post.get_absolute_url }}" target="_blank">{{ post.title }}</a>
+        {% empty %}
+        There are no similar posts yet
+        </p>
+    {% endfor %}
     {% with  comments.count as total_comments %}
         <h2>{{ total_comments }} comment{{ total_comments|pluralize }} </h2>
 
@@ -31,7 +38,6 @@
 
     {% endfor %}
 
-    <p>No need to remember template syntax, will be more helpful just building APIs</p>
 
     {% include "posts/include/comment_form.html" %}
 

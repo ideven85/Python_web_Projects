@@ -11,7 +11,7 @@ from django.db import models
 from django.urls import reverse
 from django.utils import timezone
 from transformers import pipeline
-
+from taggit.managers import TaggableManager
 
 from .managers import BaseManager
 
@@ -48,6 +48,8 @@ class Post(BaseModel):
     publish = models.DateTimeField(default=timezone.now)
     status = models.CharField(choices=Status, max_length=2, default=Status.DRAFT)
 
+
+    tags = TaggableManager()
     objects = models.Manager()
     published = PublishedManager()
 

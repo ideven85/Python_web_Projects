@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "lms"
 version = "0.1.0"
-package-mpde = false
+package-mode = false
 description = ""
 authors = ["Deven Kalra <ideven85@gmail.com>"]
 readme = "README.md"
@@ -14,6 +14,8 @@ black = "^24.10.0"
 transformers = "^4.48.1"
 torch = "^2.5.1"
 jupyter = "^1.1.1"
+torchvision = "^0.20.1"
+django-taggit = "^6.1.0"
 
 
 [build-system]

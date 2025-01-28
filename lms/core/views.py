@@ -1,7 +1,8 @@
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Count
 from django.shortcuts import render, get_object_or_404
 from django.views.decorators.http import require_POST
-
+from taggit.models import Tag
 from .forms import CommentForm
 
 # Create your views here.
@@ -9,8 +10,12 @@ from .forms import CommentForm
 from .models import Post
 
 
-def post_list(request):
+def post_list(request, tag_slug=None):
     post_list1 = Post.published.all()
+    tag = None
+    if tag_slug:
+        tag = get_object_or_404(Tag,slug=tag_slug)
+        post_list1 = post_list1.filter(tags__in=[tag])
     paginator = Paginator(post_list1, 3)
     page_number = request.GET.get("page", 1)  # Dictionary, get_or_default 1
     try:
@@ -20,16 +25,33 @@ def post_list(request):
     except EmptyPage:
         posts = paginator.page(paginator.num_pages)
 
-    return render(request, "posts/list.html", {"posts": posts})
+    return render(request,
+                  "posts/list.html",
+                  {"posts": posts,
+                        "tag": tag
+                   })
 
 
 def post_detail(request, id):
     post = get_object_or_404(Post, id=id, status=Post.Status.PUBLISHED)
     comments = post.comments.filter(active=True)
     form = CommentForm()
-
+    post_tag_ids = post.tags.values_list('id',flat=True) # flat indicates single values instead of tuples which queryset returns
+    similar_posts = (Post.published
+                     .filter(tags__in=post_tag_ids)
+                     .exclude(id=post.id))
+    #todo redo with proper algorithm
+    similar_posts = (similar_posts
+                     .annotate(same_tags = Count('tags')) # Descending Order
+                    .order_by('same_tags','publish')[:4]) # temporary
     return render(
-        request, "posts/detail.html", {"post": post, "comments": comments, "form": form}
+        request,
+        "posts/detail.html",
+        {"post": post,
+         "comments": comments,
+         "form": form,
+         "similar_posts": similar_posts
+         }
     )
 
 
