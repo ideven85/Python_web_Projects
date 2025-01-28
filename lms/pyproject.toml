@@ -1,6 +1,7 @@
 [tool.poetry]
 name = "lms"
 version = "0.1.0"
+package-mpde = false
 description = ""
 authors = ["Deven Kalra <ideven85@gmail.com>"]
 readme = "README.md"
