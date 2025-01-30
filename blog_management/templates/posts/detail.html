@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load post_tags %}
 {% block title %} {{ post.title }} {% endblock %}
 
 {% block content %}
@@ -11,7 +11,7 @@
         <p class="date">Published by {{ post.author }}</p>
               <div class="w-lg-65 mx-lg-auto">
 
-        <p>{{ post.body|linebreaks }}</p>
+        <p>{{ post.body|markdown }}</p>
               </div>
     </div>
     <h2>Similar posts</h2>

@@ -11,12 +11,12 @@ from .models import Post
 
 
 def post_list(request, tag_slug=None):
-    post_list1 = Post.published.all()
+    post_lists = Post.published.all()
     tag = None
     if tag_slug:
         tag = get_object_or_404(Tag,slug=tag_slug)
-        post_list1 = post_list1.filter(tags__in=[tag])
-    paginator = Paginator(post_list1, 3)
+        post_lists = post_lists.filter(tags__in=[tag])
+    paginator = Paginator(post_lists, 3)
     page_number = request.GET.get("page", 1)  # Dictionary, get_or_default 1
     try:
         posts = paginator.page(page_number)
@@ -67,3 +67,5 @@ def post_comment(request, post_id):
     return render(
         request, "posts/comment.html", {"post": post, "form": form, "comment": comment}
     )
+
+#todo Implementing full text search using postgres or after learning nlp

@@ -3,7 +3,9 @@
     <ul class="pagination">
         {% if page.has_previous %}
             <li class="page-item ">
-                <a class="page-link" href="?page={{ page.previous_page_number }}">Previous</a>
+                <a class="page-link" href="?page={{ page.previous_page_number }}"> <span aria-hidden="true">
+                    <i class="bi-chevron-double-left small"></i>
+                  </span></a>
 
 
             </li>
