@@ -50,7 +50,7 @@ def post_list(request, tag_slug=None):
 
     return render(request, "posts/list.html", {"posts": posts, "tag": tag})
 
-@login_required(redirect_field_name='/account/login/')
+
 def post_detail(request, id):
     post = get_object_or_404(Post, id=id, status=Post.Status.PUBLISHED)
     comments = post.comments.filter(active=True)

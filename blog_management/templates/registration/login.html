@@ -12,12 +12,63 @@
 
   {% endif %}
   <div class="login-form">
-    <form action="{% url 'login' %}" method="post">
-      {{ form.as_p }}
-      {% csrf_token %}
-      <input type="hidden" name="next" value="{{ next }}" />
-      <p><input type="submit" value="Log-in"></p>
-    </form>
+        <div class="container content-space-3 content-space-t-lg-4 content-space-b-lg-3">
+            <div class="flex-grow-1 mx-auto" style="max-width: 28rem;">
+                <!-- Heading -->
+                <div class="text-center mb-5 mb-md-7">
+                    <h1 class="h2">Welcome back</h1>
+                    <p>Login to manage your account.</p>
+                </div>
+                <!-- End Heading -->
+
+                <!-- Form -->
+                <form class="login" action="{% url 'login' %}" method="post">
+                    <!-- Form -->
+                    <div class="mb-4">
+                        <label class="form-label" for="signupSimpleLoginEmail">Your email</label>
+                        <input type="email" class="form-control form-control-lg" name="username" id="signupSimpleLoginEmail" placeholder="email@site.com" aria-label="email@site.com" required>
+                        <span class="invalid-feedback">Please enter a valid email address.</span>
+                    </div>
+                    <!-- End Form -->
+
+                    <!-- Form -->
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <label class="form-label" for="signupSimpleLoginPassword">Password</label>
+
+                            <a class="form-label-link" href="./page-reset-password-simple.html">Forgot Password?</a>
+                        </div>
+
+                        <div class="input-group input-group-merge" data-hs-validation-validate-class>
+                            <input type="password" class="js-toggle-password form-control form-control-lg" name="password" id="signupSimpleLoginPassword" placeholder="8+ characters required" aria-label="8+ characters required" required minlength="8"
+                                   data-hs-toggle-password-options='{
+                     "target": "#changePassTarget",
+                     "defaultClass": "bi-eye-slash",
+                     "showClass": "bi-eye",
+                     "classChangeTarget": "#changePassIcon"
+                   }'>
+
+                        </div>
+
+                        <span class="invalid-feedback">Please enter a valid password.</span>
+                    </div>
+                    <!-- End Form -->
+                    {% csrf_token %}
+                    <input type="hidden" name="next" value="{{ next }}" />
+
+                    <div class="d-grid mb-3">
+                        <input type="submit" class="btn btn-primary btn-lg" value="Login" />
+                    </div>
+
+                    <div class="text-center">
+                        <p>Don't have an account yet? <a class="link" href="{% url 'register' %}">Sign up here</a></p>
+                    </div>
+                </form>
+                <!-- End Form -->
+            </div>
+        </div>
+
+    
     <p>
       <a href="{% url "password_reset" %}">
         Forgotten your password?

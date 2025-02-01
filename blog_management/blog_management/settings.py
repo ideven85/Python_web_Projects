@@ -44,10 +44,10 @@ INSTALLED_APPS = [
 ]
 AUTH_USER_MODEL = "core_user.User"
 LOGIN_REDIRECT_URL = "dashboard"
-#LOGOUT_REDIRECT_URL = "/"
-LOGIN_URL="login/"
-LOGOUT_URL="logout/"
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# LOGOUT_REDIRECT_URL = "/"
+LOGIN_URL = "login/"
+LOGOUT_URL = "logout/"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -136,5 +136,5 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-MEDIA_URL = 'media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = "media/"
+MEDIA_ROOT = BASE_DIR / "media"

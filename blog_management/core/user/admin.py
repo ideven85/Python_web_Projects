@@ -43,7 +43,9 @@ class UserAdmin(DjangoUserAdmin):
     list_display = ["email", "username", "first_name", "last_name", "is_staff"]
     search_fields = ("email", "first_name", "last_name")
     ordering = ("email",)
+
+
 @admin.register(Profile)
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ['user','date_of_birth','photo']
-    raw_id_fields = ['user']
+    list_display = ["user", "date_of_birth", "photo"]
+    raw_id_fields = ["user"]
