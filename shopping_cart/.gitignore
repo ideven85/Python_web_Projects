@@ -1,9 +1,0 @@
-.venv/
-.idea/
-.vs_code/
-.DS_Store
-virtualenv/
-datasets/
-.vscode/
-__pycache__/
-node_modules/

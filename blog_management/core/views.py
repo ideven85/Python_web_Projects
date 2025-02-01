@@ -33,6 +33,7 @@ class MyView(View):
         return response
 
 
+# now make another project then build APIs...
 def post_list(request, tag_slug=None):
     post_lists = Post.published.all()
     tag = None
