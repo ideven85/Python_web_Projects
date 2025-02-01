@@ -48,7 +48,6 @@ class Post(BaseModel):
     publish = models.DateTimeField(default=timezone.now)
     status = models.CharField(choices=Status, max_length=2, default=Status.DRAFT)
 
-
     tags = TaggableManager()
     objects = models.Manager()
     published = PublishedManager()

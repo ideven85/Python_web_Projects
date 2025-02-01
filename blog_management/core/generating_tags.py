@@ -2,7 +2,7 @@
 # Can't same the same for Spring Boot at least...Know it much better...
 # With Django.. Learn it and flask first and revise CSS/React/Javascript/Typescript... and build a few projects
 
-#todo
+# todo
 import torch
 from transformers import DistilBertTokenizer, DistilBertForSequenceClassification
 
