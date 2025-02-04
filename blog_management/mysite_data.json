@@ -1,0 +1,1091 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-02-04T15:51:30.480Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Deven Kalra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-02-04T15:51:48.346Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Deven Kalra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-02-04T16:12:26.327Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "First new U.S. nuclear reactor since 2016 is now in operation",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-02-04T16:41:47.227Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": " ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-02-04T16:42:08.095Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Aanchal Kalra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\", \"First name\", \"Last name\", \"Last login\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-02-04T16:42:45.068Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": " ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-02-04T16:43:00.628Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "Anchit Kalra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Username\", \"First name\", \"Last name\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-02-04T17:16:11.151Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Profile Deven Kalra",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-02-04T17:16:25.871Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "2",
+    "object_repr": "Profile Deven Kalra",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-02-04T17:37:01.527Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Trump Indicted in New York Donald Trump Is Indicted in New York",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-02-04T17:39:05.744Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Introducing react.dev",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-02-04T17:42:39.012Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Macron says France will build new nuclear energy reactors",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-02-04T17:43:02.925Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Trump Indicted in New York Donald Trump Is Indicted in New York",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-02-04T17:43:20.342Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Introducing react.dev",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Body\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add tag",
+    "content_type": 6,
+    "codename": "add_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change tag",
+    "content_type": 6,
+    "codename": "change_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete tag",
+    "content_type": 6,
+    "codename": "delete_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view tag",
+    "content_type": 6,
+    "codename": "view_tag"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add tagged item",
+    "content_type": 7,
+    "codename": "add_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change tagged item",
+    "content_type": 7,
+    "codename": "change_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete tagged item",
+    "content_type": 7,
+    "codename": "delete_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view tagged item",
+    "content_type": 7,
+    "codename": "view_taggeditem"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add post",
+    "content_type": 8,
+    "codename": "add_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change post",
+    "content_type": 8,
+    "codename": "change_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete post",
+    "content_type": 8,
+    "codename": "delete_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view post",
+    "content_type": 8,
+    "codename": "view_post"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add comment",
+    "content_type": 9,
+    "codename": "add_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change comment",
+    "content_type": 9,
+    "codename": "change_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete comment",
+    "content_type": 9,
+    "codename": "delete_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view comment",
+    "content_type": 9,
+    "codename": "view_comment"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 10,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 10,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 10,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 10,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add profile",
+    "content_type": 11,
+    "codename": "add_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change profile",
+    "content_type": 11,
+    "codename": "change_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete profile",
+    "content_type": 11,
+    "codename": "delete_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view profile",
+    "content_type": 11,
+    "codename": "view_profile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "taggit",
+    "model": "tag"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "taggit",
+    "model": "taggeditem"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "core",
+    "model": "post"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "core",
+    "model": "comment"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "core_user",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "core_user",
+    "model": "profile"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "m58djk5jut3bj8mqtau3puqsb0te9z9s",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQRO_iGllJ_FtT0nMGa7274ABypDipEHcnkVJAOfPezFslXJeS1iZzGlmdlVOn3y4jPaXugB9Y75OmqS7zmPWu6IM2fZ1YXpfD_Tso2Mq29rcgJlqyBiVEcRAtSwe9HyBY9pyj4Q6yo0COEMyAzoHvt2zBSgT1-QLYvzdG:1tfMmY:1Kmlx1NAufFmExHyUDj9YxchdLByEZrgYF7kz913Q_Q",
+    "expire_date": "2025-02-18T17:32:18.668Z"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 1,
+  "fields": {
+    "name": "Georgia",
+    "slug": "georgia"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 2,
+  "fields": {
+    "name": "electricity",
+    "slug": "electricity"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 3,
+  "fields": {
+    "name": "generation",
+    "slug": "generation"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 4,
+  "fields": {
+    "name": "nuclear",
+    "slug": "nuclear"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 5,
+  "fields": {
+    "name": "states",
+    "slug": "states"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 6,
+  "fields": {
+    "name": "elections",
+    "slug": "elections"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 7,
+  "fields": {
+    "name": "politics",
+    "slug": "politics"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 8,
+  "fields": {
+    "name": "computer science",
+    "slug": "computer-science"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 9,
+  "fields": {
+    "name": "frontend",
+    "slug": "frontend"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 10,
+  "fields": {
+    "name": "technology",
+    "slug": "technology"
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 11,
+  "fields": {
+    "name": "electricty generation",
+    "slug": "electricty-generation"
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 1,
+  "fields": {
+    "tag": 1,
+    "content_type": 8,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 2,
+  "fields": {
+    "tag": 2,
+    "content_type": 8,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 3,
+  "fields": {
+    "tag": 3,
+    "content_type": 8,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 4,
+  "fields": {
+    "tag": 4,
+    "content_type": 8,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 5,
+  "fields": {
+    "tag": 5,
+    "content_type": 8,
+    "object_id": 1
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 6,
+  "fields": {
+    "tag": 6,
+    "content_type": 8,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 7,
+  "fields": {
+    "tag": 7,
+    "content_type": 8,
+    "object_id": 2
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 8,
+  "fields": {
+    "tag": 8,
+    "content_type": 8,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 9,
+  "fields": {
+    "tag": 9,
+    "content_type": 8,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 10,
+  "fields": {
+    "tag": 10,
+    "content_type": 8,
+    "object_id": 3
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 11,
+  "fields": {
+    "tag": 11,
+    "content_type": 8,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 12,
+  "fields": {
+    "tag": 4,
+    "content_type": 8,
+    "object_id": 4
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 13,
+  "fields": {
+    "tag": 10,
+    "content_type": 8,
+    "object_id": 4
+  }
+},
+{
+  "model": "core.post",
+  "pk": 1,
+  "fields": {
+    "public_id": "bde52e52-c3d8-4d5d-9f21-8ce9f64649d3",
+    "created": "2025-02-04T16:12:26.274Z",
+    "updated": "2025-02-04T16:12:26.274Z",
+    "title": "First new U.S. nuclear reactor since 2016 is now in operation",
+    "author": 1,
+    "slug": "first-new-us-nuclear-reactor-since-2016-is-now-in-operation",
+    "body": "A new reactor at Georgia’s Vogtle nuclear power plant is now in commercial operation, according to an announcement from Georgia Power, one of the plant’s owners. It is the first new nuclear reactor to start up in the United States since the Tennessee Valley Authority’s Watts Bar 2 was commissioned in 2016.\r\n\r\nThe new 1,114 megawatt (MW) Unit 3 reactor joins two existing reactors at Plant Vogtle, which is jointly owned by Georgia Power and three other electric utility companies. The plant’s first two reactors, with a combined 2,430 MW of nameplate capacity, came online in the late 1980s. Georgia Power expects another similar-sized fourth reactor, Vogtle Unit 4, to begin operation sometime between November 2023 and March 2024. The two new reactors will make Plant Vogtle the largest nuclear power plant in the country, surpassing the 4,210 MW Palo Verde plant in Arizona.\r\n\r\nConstruction at the two new reactor sites began in 2009. Originally expected to cost $14 billion and begin commercial operation in 2016 (Vogtle 3) and 2017 (Vogtle 4), the project ran into significant construction delays and cost overruns. The total cost of the project is now estimated at more than $30 billion.\r\n\r\nBoth Vogtle Units 3 and 4 use a new reactor design, the Westinghouse AP1000. This next generation advanced reactor has a smaller footprint and simpler design than previous generation reactor technologies. It also features robust passive safety systems that can shut down the reactor without any operator action or external power source. Units 3 and 4 are the first U.S. deployment of the AP1000 Generation III+ reactor. Two other Westinghouse AP1000 reactors were planned for a nuclear power plant in South Carolina, but construction was halted in 2017.\r\n\r\nThe first commercial nuclear power reactor in the United States came online in December 1957 in Shippingport, Pennsylvania. Most U.S. nuclear reactors were built in the 20-year period from 1970 to 1990. Prior to Vogtle Unit 3, the last nuclear reactor to start in the United States was Watts Bar Unit 2 in Tennessee. Construction on Watts Bar 2 began in 1973 but was suspended in 1985. Work resumed in 2007, and the reactor came online in 2016.\r\n\r\nWith 95,881 MW of nuclear power capacity at 93 operating commercial reactors, the United States has more nuclear capacity than any other country. Nuclear power plants produce nearly 20% of the country’s electricity.\r\n\r\nAlthough a number of nuclear reactors have retired in recent years, there has been interest in nuclear power as an energy resource to help reduce the carbon footprint of the U.S. electric power sector. Generation from nuclear reactors doesn’t produce CO2 emissions and can provide essential baseload power that would otherwise largely come from coal- and natural gas-fired plants.\r\n\r\nRecent legislation, such as the Bipartisan Infrastructure Law and the Inflation Reduction Act, supports U.S. nuclear energy as part of a clean energy, zero-carbon generating portfolio.",
+    "publish": "2025-02-04T16:10:17Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "core.post",
+  "pk": 2,
+  "fields": {
+    "public_id": "96dc55da-3333-457f-86e9-726f4fc52ce2",
+    "created": "2025-02-04T17:37:01.510Z",
+    "updated": "2025-02-04T17:43:02.919Z",
+    "title": "Trump Indicted in New York Donald Trump Is Indicted in New York",
+    "author": 2,
+    "slug": "trump-indicted-in-new-york-donald-trump-is-indicted-in-new-york",
+    "body": "Mr. Trump will be the first former president to face criminal charges. The precise charges are not yet known, but the case is focused on a hush-money payment to a porn star during his 2016",
+    "publish": "2025-02-04T17:35:38Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "core.post",
+  "pk": 3,
+  "fields": {
+    "public_id": "94215eb5-4d38-458d-9817-4a918b992acf",
+    "created": "2025-02-04T17:39:05.734Z",
+    "updated": "2025-02-04T17:43:20.337Z",
+    "title": "Introducing react.dev",
+    "author": 5,
+    "slug": "introducing-reactdev",
+    "body": "Today we are thrilled to launch react.dev, the new home for React and its documentation. In this post, we would like to give you a tour of the new site.\r\n\r\ntl;dr \r\n\r\n* The new React site (react.dev) teaches modern React with function components and Hooks.\r\n* We’ve included diagrams, illustrations, challenges, and over 600 new interactive examples.\r\n* The previous React documentation site has now moved to legacy.reactjs.org.",
+    "publish": "2025-02-04T17:37:40Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "core.post",
+  "pk": 4,
+  "fields": {
+    "public_id": "3502e675-5f19-4be3-b12b-9b7341e034eb",
+    "created": "2025-02-04T17:42:38.995Z",
+    "updated": "2025-02-04T17:42:38.995Z",
+    "title": "Macron says France will build new nuclear energy reactors",
+    "author": 2,
+    "slug": "macron-says-france-will-build-new-nuclear-energy-reactors",
+    "body": "French President Emmanuel Macron looks on during a news conference with Benin's President Patrice Talon after the signing of an agreement about the return of looted cultural artefacts to the African country, at the Elysee Palace in Paris, France, November 9, 2021. REUTERS/Sarah Meyssonnier Purchase Licensing Rights, opens new tab\r\nPARIS, Nov 9 (Reuters) - France will build new nuclear reactors to help the country lessen its dependence on foreign countries for its energy supplies, meet global warming targets and keep prices under control, President Emmanuel Macron said on Tuesday.\r\nWith concerns over purchasing power topping opinion polls five months before the presidential election, at a time of soaring energy prices, Macron said the decision to go for new reactors was essential to keep prices \"reasonable.\"\r\n\"We are going, for the first time in decades, to relaunch the construction of nuclear reactors in our country and continue to develop renewable energies,\" Macron said in a televised address to the nation.\r\nThis was meant \"to guarantee France's energy independence, to guarantee our country's electricity supply and achieve our objectives, in particular carbon neutrality in 2050,\" he said.\r\nAs Europe grapples with steep increases in energy prices, France is taking a different path from neighbours like Germany.\r\nGermany responded to the 2011 Fukushima nuclear disaster in Japan by accelerating its national exit scheme for reactors.\r\nMacron gave no details, but his government is expected to announce the construction of up to six new pressurised-water reactors within the coming weeks.\r\nPreviously, the government had said it would not launch any new third-generation EPR reactor projects until state-owned EDF's (EDF.PA), opens new tab much-delayed EPR nuclear power plant in Flamanville, northwestern France, is completed.\r\nBut French media in October reported that the impact of Europe's gas crisis on energy prices, and the knock-on effect on household spending power, had accelerated Paris's decision to commit to the EPR technology.\r\nGreenpeace criticised Tuesday's announcement, saying the plan to build new reactors was \"disconnected from reality,\" pointing to the problems with the Flamanville project, which has suffered a decade of delays and huge cost overruns.\r\nEarly in his mandate, Macron pledged to reduce nuclear's contribution to France's energy mix to 50% from 75% by 2035.\r\nReporting by Sudip Kar-Gupta; writing by Ingrid Melander; Editing by Richard Lough",
+    "publish": "2025-02-04T17:41:18Z",
+    "status": "PB"
+  }
+},
+{
+  "model": "core.comment",
+  "pk": 1,
+  "fields": {
+    "public_id": "959deba3-e9d9-43c0-ad4a-0fcdc9223273",
+    "created": "2025-02-04T17:40:00.185Z",
+    "updated": "2025-02-04T17:40:00.185Z",
+    "post": 3,
+    "name": "Aanchal",
+    "email": "ankster92@gmail.com",
+    "body": "I love react",
+    "active": true
+  }
+},
+{
+  "model": "core_user.profile",
+  "pk": 1,
+  "fields": {
+    "public_id": "8ad28144-9522-4c28-ba6c-65d7b432c622",
+    "created": "2025-02-04T16:50:59.482Z",
+    "updated": "2025-02-04T16:57:42.295Z",
+    "user": 4,
+    "date_of_birth": "2021-10-10T00:00:00Z",
+    "photo": "users/2025/02/04/Image_7BpHZNg.jpg"
+  }
+},
+{
+  "model": "core_user.profile",
+  "pk": 2,
+  "fields": {
+    "public_id": "4e75fc90-e1fb-449b-b112-02846708b009",
+    "created": "2025-02-04T17:16:11.148Z",
+    "updated": "2025-02-04T17:16:25.867Z",
+    "user": 1,
+    "date_of_birth": "1985-11-21T17:15:45Z",
+    "photo": "users/2025/02/04/Tina_Latina_0248.jpeg"
+  }
+},
+{
+  "model": "core_user.profile",
+  "pk": 3,
+  "fields": {
+    "public_id": "fb36bb08-9bff-4b54-b15d-62347b0f15c9",
+    "created": "2025-02-04T17:25:26.174Z",
+    "updated": "2025-02-04T17:25:26.174Z",
+    "user": 5,
+    "date_of_birth": null,
+    "photo": ""
+  }
+},
+{
+  "model": "core_user.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$YLxK0xe3dgA5vckTcyWRpI$pQZTmK4Hfha2l6UHiPkPUf6SpWxlsU/sE/TCktOGB9Q=",
+    "last_login": "2025-02-04T17:57:46.382Z",
+    "public_id": "29bb0988-2d18-4876-9c2d-1f02e5340096",
+    "created": "2025-02-04T15:48:45.904Z",
+    "updated": "2025-02-04T15:51:48.342Z",
+    "first_name": "Deven",
+    "last_name": "Kalra",
+    "username": "ideven091",
+    "email": "ideven091@gmail.com",
+    "is_active": true,
+    "is_staff": true,
+    "is_superuser": true,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core_user.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$uqb8wy2Dz6ZOetpte6LPEE$Go0Hsg8Z5gDan8aGhYYM0QbkR0Nbf7TV6ULFcjFoF6U=",
+    "last_login": "2025-02-04T16:42:06Z",
+    "public_id": "99eba56b-5faa-431a-b832-fbfb8588df1a",
+    "created": "2025-02-04T16:41:47.225Z",
+    "updated": "2025-02-04T16:42:08.088Z",
+    "first_name": "Aanchal",
+    "last_name": "Kalra",
+    "username": "ankster92",
+    "email": "ankster92@gmail.com",
+    "is_active": true,
+    "is_staff": false,
+    "is_superuser": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core_user.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$XPj4WZiV9MbwWRM70bW38v$2tAiE0i+vTceuIrLdDNSTO05DkloAamngl2vSWxFCSo=",
+    "last_login": "2025-02-04T18:00:28.626Z",
+    "public_id": "f009b4ea-64a9-4041-bc6d-c129d0ea495f",
+    "created": "2025-02-04T16:42:45.067Z",
+    "updated": "2025-02-04T17:04:44.470Z",
+    "first_name": "Anchit",
+    "last_name": "Kalra1",
+    "username": "ak007",
+    "email": "ak007kalra@gmail.com",
+    "is_active": true,
+    "is_staff": false,
+    "is_superuser": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core_user.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$LZJEB8Eakdmu1ylLqMSVFG$y9RTi4KuZETxEUlKXbFAJUBqvtph2/b1xlChdrkodMY=",
+    "last_login": "2025-02-04T16:52:10.427Z",
+    "public_id": "c2c1e938-c494-4d35-ad44-01485b6317bd",
+    "created": "2025-02-04T16:50:59.473Z",
+    "updated": "2025-02-04T16:57:42.293Z",
+    "first_name": "Aashvi",
+    "last_name": "Kapoor1",
+    "username": "abcd",
+    "email": "abc@gmail.com",
+    "is_active": true,
+    "is_staff": false,
+    "is_superuser": false,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "core_user.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$WNBdy7tbpwAgeHgjHqzPi0$7NSmuDNUjAuecJ/iK8RPmDcP6aKUnBUWryORqUm8jPc=",
+    "last_login": "2025-02-04T17:30:28.227Z",
+    "public_id": "2d24979d-0472-40b7-87c6-2c2fd2e91662",
+    "created": "2025-02-04T17:25:26.167Z",
+    "updated": "2025-02-04T17:34:58.982Z",
+    "first_name": "Deven1",
+    "last_name": "Kalra2",
+    "username": "deven",
+    "email": "ideven85@gmail.com",
+    "is_active": true,
+    "is_staff": false,
+    "is_superuser": false,
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
