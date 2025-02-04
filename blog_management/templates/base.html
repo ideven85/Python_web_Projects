@@ -1,6 +1,5 @@
 {% load static %}
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,8 +22,8 @@
 <body>
  <header id="header" class="navbar navbar-expand-lg navbar-end navbar-light">
 
-<div class="container">
-      <nav class="js-mega-menu navbar-nav-wrap">
+ <div class="container navbar-topbar">
+   <nav class="js-mega-menu navbar-nav-wrap">
         <!-- Default Logo -->
 
         <!-- End Default Logo -->
@@ -67,17 +66,22 @@
             {% if  request.user.is_authenticated %}
                 <li class="nav-item ">
 
-                <form  action="{% url "logout" %}" method="post">
-                    <input type="submit" class="nav-link" value="Logout" />
+                <form  action="{% url 'logout' %}" method="post">
+                  <button type="submit" class="nav-link"  >Logout </button>
                     {% csrf_token %}
                 </form>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/account/edit/">Edit your details</a>
                 </li>
-            {% elif not request.user.is_authenticated %}
+            {% elif  request.user.is_anonymous %}
+
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Login</a>
+                <a class="nav-link" href="{% url 'register' %}">Register</a>
+                </li>
+                <li class="nav-item">
+
+                 <a class="nav-link" href="{% url 'login' %}">Login</a>
                 </li>
 
             {% endif %}
@@ -88,15 +92,7 @@
             <!-- End Courses -->
 
             <!-- Search Form -->
-            <li class="nav-item flex-grow-1 d-none d-lg-inline-block ">
-              <form class="input-group input-group-merge">
-                <div class="input-group-prepend input-group-text">
-                  <i class="bi-search"></i>
-                </div>
-                <input type="text" class="form-control" placeholder="What do you want to learn?" aria-label="What do you want to learn?">
-                  <button type="submit" class=""
-              </form>
-            </li>
+
             <!-- End Search Form -->
 
             <!-- Dropdown -->
@@ -105,7 +101,7 @@
               <div class="hs-sub-menu hs-position-right dropdown-menu" aria-labelledby="listingsDropdown" style="min-width: 14rem;">
                 <a class="dropdown-item " href="/">Home</a>
 
-                <a class="dropdown-item " href="#">Author Profile</a>
+                <a class="dropdown-item " href="{% url 'dashboard %}">Dashboard</a>
               </div>
             </li>
             <!-- End Dropdown -->
@@ -125,7 +121,11 @@
          <div class="row justify-content-lg-between">
              <div class="col-lg-8 mb-10 mb-lg-0">
                  <div class="d-grid gap-7 mb-7">
-
+   {% if request.user.is_authenticated %}
+          <h1>Welcome {{request.user.name}}</h1>
+                   {%else%}
+                   <h1>Welcome guest</h1>
+    {% endif %}
      {% block content %}
     {% endblock %}
                  </div>

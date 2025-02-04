@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load post_tags %}
+
 {% block title %} Post Lists {% endblock %}
 {% block content %}
 
@@ -32,7 +34,7 @@
                             <a class="text-dark" href="{{ post.get_absolute_url }}" target="_blank">{{ post.title }}</a>
                         </h3>
 
-                        <p class="card-text">{{ post.body|truncatewords:30}}</p>
+                        <p class="card-text">{{ post.body|markdown|truncatewords_html:30}}</p>
 
                         <!-- Card Footer -->
                         <div class="card-footer">

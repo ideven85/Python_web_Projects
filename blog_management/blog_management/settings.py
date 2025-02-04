@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 ]
 AUTH_USER_MODEL = "core_user.User"
 LOGIN_REDIRECT_URL = "dashboard"
+
 # LOGOUT_REDIRECT_URL = "/"
 LOGIN_URL = "login/"
 LOGOUT_URL = "logout/"
@@ -86,7 +87,7 @@ WSGI_APPLICATION = "blog_management.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "lms",
+        "NAME": "blog",
         "USER": "deven",
         "PASSWORD": "728000",
     }

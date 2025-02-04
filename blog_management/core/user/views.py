@@ -38,17 +38,28 @@ def dashboard(request):
 
 
 def register(request):
-    user_form = None
+    # user_form = None
+    print("Hello")
     if request.method == "POST":
+        print("Hi")
         user_form = UserRegistration(request.POST)
+        # print(user_form.password)
         if user_form.is_valid():
+
             new_user = user_form.save(commit=False)
+
             new_user.set_password(user_form.cleaned_data["password"])
+            print(new_user)
             new_user.save()
             Profile.objects.create(user=new_user)
+            print("xxxx")
             return render(request, "account/register_done.html", {"new_user": new_user})
-        else:
-            user_form = UserRegistration()
+        # else:
+        #     print("something is up")
+        #     return HttpResponse("Something went wrong")
+    else:
+        user_form = UserRegistration()
+    print(request.method)
     return render(request, "account/register.html", {"user_form": user_form})
 
 
@@ -59,14 +70,15 @@ def edit(request):
         # is allowing only for super users...No idea how
         # working
         profile_form = ProfileEditForm(
-            instance=request.user.profile, data=request.POST, files=request.FILES
+            instance=request.user, data=request.POST, files=request.FILES
         )
         if user_form.is_valid() and profile_form.is_valid():
             user_form.save()
             profile_form.save()
+        return render(request, "account/dashboard.html")
     else:
         user_form = UserEditForm(instance=request.user)
-        profile_form = ProfileEditForm(instance=request.user.profile)
+        profile_form = ProfileEditForm(instance=request.user)
     return render(
         request,
         "account/edit.html",

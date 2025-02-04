@@ -39,8 +39,8 @@ class UserManager(BaseManager, BaseUserManager):
 
 
 class Profile(BaseModel):
-    user = models.OneToOneField(
-        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="profile"
+    user = models.ForeignKey(
+        to=settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="profile"
     )
     date_of_birth = models.DateTimeField(blank=True, null=True)
     photo = models.ImageField(upload_to="users/%Y/%m/%d", blank=True)
@@ -57,7 +57,7 @@ class User(BaseModel, AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
-    # profile = models.OneToOneField(to=Profile,related_name='profile',on_delete=models.CASCADE)
+    # profile = models.ForeignKey(to=Profile,related_name='profile',on_delete=models.CASCADE)
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = ["username"]
     # profile = models.OneToOneField(to=P)

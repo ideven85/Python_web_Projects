@@ -1,0 +1,32 @@
+#about {
+    box-sizing: border-box;
+    justify-content: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+#about-button {
+    width: 150px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding-block: 5px;
+    align-self: center;
+    cursor: pointer;
+    background: #2b2d42;
+    color: #fff;
+}
+/* style when the div have classname as dark */
+div .dark {
+    background-color: #2b2d42;
+    color: #fff;
+}
+/* style when the theme is selected as dark */
+.dark button {
+    background-color: #fff;
+    color: #000;
+}
+
+
