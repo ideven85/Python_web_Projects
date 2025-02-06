@@ -10,7 +10,8 @@ from django.db import models
 # from django.db.models.functions import Now
 from django.urls import reverse
 from django.utils import timezone
-from transformers import pipeline
+
+# from transformers import pipeline
 from taggit.managers import TaggableManager
 
 from .managers import BaseManager

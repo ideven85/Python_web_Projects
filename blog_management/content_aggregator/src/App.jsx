@@ -6,6 +6,7 @@ import Landing from "./layout/Landing.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BasicExample from "./components/BasicExample.jsx";
 import Header from "./layout/Header.jsx";
+import './App.css';
 
 const  App = () => {
     return (

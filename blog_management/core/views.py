@@ -21,16 +21,17 @@ def index(request):
     return response
 
 
-class MyView(View):
-    def dispatch(self, request, *args, **kwargs):
-        # Always call this view first
-        return super().dispatch(request, *args, **kwargs)
-
-    def get(self, request):
-        response = HttpResponse()
-        response.cookies["my_cookie"] = "Deven"
-        response.cookies["admin"] = "Admin"
-        return response
+#
+# class MyView(View):
+#     def dispatch(self, request, *args, **kwargs):
+#         # Always call this view first
+#         return super().dispatch(request, *args, **kwargs)
+#
+#     def get(self, request):
+#         response = HttpResponse()
+#         response.cookies["my_cookie"] = "Deven"
+#         response.cookies["admin"] = "Admin"
+#         return response
 
 
 # now make another project then build APIs...
@@ -94,7 +95,6 @@ def post_comment(request, post_id):
     )
 
 
-# todo Implementing full text search using postgres or after learning nlp
 
 
 def post_search(request):

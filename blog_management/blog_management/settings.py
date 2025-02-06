@@ -45,7 +45,7 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = "core_user.User"
 LOGIN_REDIRECT_URL = "dashboard"
 
-# LOGOUT_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/"
 LOGIN_URL = "login/"
 LOGOUT_URL = "logout/"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"

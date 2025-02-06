@@ -70,41 +70,29 @@
                   <button type="submit" class="nav-link"  >Logout </button>
                     {% csrf_token %}
                 </form>
+
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/account/edit/">Edit your details</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{%url 'dashboard' %}">Go to your dashboard</a>
+                </li>
             {% elif  request.user.is_anonymous %}
 
                 <li class="nav-item">
-                <a class="nav-link" href="{% url 'register' %}">Register</a>
+                <a class="nav-link" href="{% url 'register' %}">New here Register</a>
                 </li>
                 <li class="nav-item">
 
-                 <a class="nav-link" href="{% url 'login' %}">Login</a>
+                 <a class="nav-link" href="{% url 'login' %}">Have an account...Login</a>
                 </li>
 
             {% endif %}
 
 
 
-            <!-- Courses -->
-            <!-- End Courses -->
 
-            <!-- Search Form -->
-
-            <!-- End Search Form -->
-
-            <!-- Dropdown -->
-            <li class="hs-has-sub-menu nav-item">
-              <a id="listingsDropdown" class="hs-mega-menu-invoker nav-link dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</a>
-              <div class="hs-sub-menu hs-position-right dropdown-menu" aria-labelledby="listingsDropdown" style="min-width: 14rem;">
-                <a class="dropdown-item " href="/">Home</a>
-
-                <a class="dropdown-item " href="{% url 'dashboard %}">Dashboard</a>
-              </div>
-            </li>
-            <!-- End Dropdown -->
           </ul>
         </div>
         <!-- End Collapse -->

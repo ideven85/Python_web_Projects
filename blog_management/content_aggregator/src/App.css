@@ -1,4 +1,4 @@
-/*
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -41,56 +41,45 @@
 .read-the-docs {
   color: #888;
 }
-*/
-/*#root{
+#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-p{
-  display: flex;
-  flex-direction: row;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
 
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-em{
-  display: block;
-}
-book, maintitle, subtitle, author,  isbn{
-  display: block;
-}
-publisher,pubdate{
-  display: inline-block;
-}*/
 
-/*#body-header{*/
-/*  !*height: 65vh;*!*/
-/*  opacity: 0.8;*/
-/*!*  !*background-image: url(image/macbook_mouse.jpg);*!*/
-/*  background-size: cover;*/
-/*  background-position: center;*/
-/*  background-attachment: fixed;*!*/
-/*}*/
-/*.horizontal-list{
-  list-style: none;
-  padding-left: 0px;
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
-.horizontal-list .list-group-item{
-  display: inline-block;
-  margin: 0px 8px 8px 0px;
+
+.card {
+  padding: 2em;
 }
-.horizontal-list li a {
-  color: black;
-  text-decoration: none;
-  transition: color 0.5s, border-bottom 4s;
+
+.read-the-docs {
+  color: #888;
 }
-.horizontal-list li a:hover{
-  color: lightgrey;
-  border-bottom: 1px solid black;
-}
-* {
-  margin: 0;
-  padding: 0;
-}*/
-/* normal style to the div element irrespective of the theme */

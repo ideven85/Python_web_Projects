@@ -12,6 +12,9 @@ def total_posts():
 
 
 # form to upload content should support markdown in html/react...
+# todo implement own markdown in templates..
+
+
 @register.filter(name="markdown")
 def markdown_format(text):
     return mark_safe(markdown.markdown(text))
