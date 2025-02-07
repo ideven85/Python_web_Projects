@@ -1,3 +1,0 @@
-first_name,last_name,email,language,phone,invited_by,group,is_attending,is_child,receive_updates,last_login,has_car,dietary_restrictions,comes_from
-{% for guest in guests %}{{ guest.first_name }}, {{ guest.last_name }}, {{ guest.email }}, {{ guest.profile.language }}, {{ guest.profile.phone }}, {{ guest.profile.invited_by }}, {{ guest.profile.group }}, {{ guest.profile.is_attending }}, {{ guest.profile.is_child }}, {{ guest.profile.receive_updates }}, {{ guest.profile.last_login }}, {{ guest.profile.has_car }}, {{ guest.profile.dietary_restrictions }}, {{ guest.profile.comes_from }}
-{% endfor %}
