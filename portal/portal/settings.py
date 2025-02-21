@@ -80,7 +80,7 @@ WSGI_APPLICATION = "portal.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "lms",
+        "NAME": "portal",
         "USER": "deven",
         "PASSWORD": "728000",
     }
