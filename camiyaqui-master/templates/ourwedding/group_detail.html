@@ -1,0 +1,156 @@
+{% extends 'ourwedding/base.html' %}
+{% load i18n %}
+{% block content %}
+  <section class="title_color">
+    <div class="container">
+      <h1>RSVP</h1>
+      <p>{% trans "Please, let us know if you are attending the ceremony" %}</p>
+      <table class="table table-bordered">
+        <thead class="table-head">
+        <tr>
+          <td>{% trans "Name" %}</td>
+          <td>{% trans "Is Attending" %}</td>
+          <td>{% trans "Pre Wedding" %}</td>
+          <td>{% trans "Post Wedding" %}</td>
+          <td>{% trans "Has Car" %}</td>
+          <td>{% trans "Needs Van" %}</td>
+          <td>{% trans "Is Child" %}</td>
+        </tr>
+        </thead>
+          {% for guest in group.members.all %}
+            <tr>
+              <td>{{ guest }}</td>
+              <td>
+                  {#                            <div class="primary-radio">#}
+                <input name="u_{{ guest.pk }}" type="radio" id="u_{{ guest.pk }}_attending_yes"
+                       {% if guest.is_attending %}checked=""{% endif %}>
+                <label for="u_{{ guest.pk }}_attending_yes">{% trans "Yes" %}</label>
+                <input name="u_{{ guest.pk }}" type="radio" id="u_{{ guest.pk }}_attending_no"
+                       {% if guest.is_attending is False %}checked=""{% endif %}>
+                <label for="u_{{ guest.pk }}_attending_no">{% trans "No" %}</label>
+                <input name="u_{{ guest.pk }}" type="radio" id="u_{{ guest.pk }}_attending_none"
+                       {% if guest.is_attending is None %}checked=""{% endif %}>
+                <label for="u_{{ guest.pk }}_attending_none">{% trans "Don't Know " %}</label>
+                  {#                            </div>#}
+              </td>
+              <td>
+                <div class="primary-switch">
+                  <input type="checkbox" id="u_{{ guest.pk }}_prewed_y" {% if guest.pre_wedding %}checked=""{% endif %}>
+                  <label for="u_{{ guest.pk }}_prewed_y"></label>
+                </div>
+              </td>
+              <td>
+                <div class="primary-switch">
+                  <input type="checkbox" id="u_{{ guest.pk }}_postwed_y"
+                         {% if guest.post_wedding %}checked=""{% endif %}>
+                  <label for="u_{{ guest.pk }}_postwed_y"></label>
+                </div>
+              </td>
+              <td>
+                <div class="primary-switch">
+                  <input type="checkbox" id="u_{{ guest.pk }}_van_y" {% if guest.needs_van %}checked=""{% endif %}>
+                  <label for="u_{{ guest.pk }}_van_y"></label>
+                </div>
+              </td>
+              <td>
+                <div class="primary-switch">
+                  <input type="checkbox" id="u_{{ guest.pk }}_child_y"
+                         {% if guest.is_child %}checked=""{% endif %}>
+                  <label for="u_{{ guest.pk }}_child_y"></label>
+                </div>
+              </td>
+            </tr>
+          {% endfor %}
+          {% for guest in invites %}
+            <tr>
+              <td>{{ guest }}</td>
+              <td>
+                <input name="g_{{ guest.pk }}" type="radio" id="g_{{ guest.pk }}_attending_yes"
+                       {% if guest.is_attending %}checked=""{% endif %}>
+                <label for="g_{{ guest.pk }}_attending_yes">{% trans "Yes" %}</label>
+                <input name="g_{{ guest.pk }}" type="radio" id="g_{{ guest.pk }}_attending_no"
+                       {% if guest.is_attending is False %}checked=""{% endif %}>
+                <label for="g_{{ guest.pk }}_attending_no">{% trans "No" %}</label>
+                <input name="g_{{ guest.pk }}" type="radio" id="g_{{ guest.pk }}_attending_none"
+                       {% if guest.is_attending is None %}checked=""{% endif %}>
+                <label for="g_{{ guest.pk }}_attending_none">{% trans "Don't Know " %}</label>
+              </td>
+              <td>
+                <div class="primary-switch">
+                  <input type="checkbox" id="g_{{ guest.pk }}_prewed_y" {% if guest.pre_wedding %}checked=""{% endif %}>
+                  <label for="g_{{ guest.pk }}_prewed_y"></label>
+                </div>
+              </td>
+              <td>
+                <div class="primary-switch">
+                  <input type="checkbox" id="g_{{ guest.pk }}_postwed_y"
+                         {% if guest.post_wedding %}checked=""{% endif %}>
+                  <label for="g_{{ guest.pk }}_postwed_y"></label>
+                </div>
+              </td>
+              <td>
+                <div class="primary-switch">
+                  <input type="checkbox" id="g_{{ guest.pk }}_car_y" {% if guest.has_car %}checked=""{% endif %}>
+                  <label for="g_{{ guest.pk }}_car_y"></label>
+                </div>
+              </td>
+              <td>
+                <div class="primary-switch">
+                  <input type="checkbox" id="g_{{ guest.pk }}_van_y" {% if guest.needs_van %}checked=""{% endif %}>
+                  <label for="g_{{ guest.pk }}_van_y"></label>
+                </div>
+              </td>
+              <td>
+                <div class="primary-switch">
+                  <input type="checkbox" id="g_{{ guest.pk }}_child_y"
+                         {% if guest.is_child %}checked=""{% endif %}>
+                  <label for="g_{{ guest.pk }}_child_y"></label>
+                </div>
+              </td>
+            </tr>
+          {% endfor %}
+        <tr>
+          <td><a href="{% url 'RSVP' %}">
+            <button class="btn btn-info">{% trans "Submit" %}</button>
+          </a></td>
+        </tr>
+      </table>
+      <a href="{% url 'guest-add' %}">
+        <button class="btn btn-info">{% trans "Add Another" %}</button>
+      </a>
+    </div>
+  </section>
+{% endblock %}
+{% block extra_footer_scritps %}
+  <script>$(document).ready(function () {
+      $('input:radio').change(function () {
+          data = {
+              'id': $(this).attr('id'),
+              'new_status': $(this).is(":checked")
+          };
+          console.log(JSON.stringify(data));
+          $.ajax({
+              type: "POST",
+              dataType: 'json',
+              contentType: 'application/json',
+              url: "{% url 'update-guest-ajax' %}",
+              data: JSON.stringify(data),
+          });
+      });
+      $('input:checkbox').change(function () {
+          data = {
+              'id': $(this).attr('id'),
+              'new_status': $(this).is(":checked")
+          };
+          console.log(JSON.stringify(data));
+          $.ajax({
+              type: "POST",
+              dataType: 'json',
+              contentType: 'application/json',
+              url: "{% url 'update-guest-ajax' %}",
+              data: JSON.stringify(data)
+          });
+      });
+  });
+  </script>
+{% endblock %}

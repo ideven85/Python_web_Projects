@@ -1,0 +1,59 @@
+{% extends 'backend/base_backend.html' %}
+{% block content %}
+    <div class="container mt-2">
+    <div class="row">
+      <div class="col-12">
+        <a href="{% url 'profile-edit' guest.pk %}"><button class="btn btn-primary">Edit</button></a>
+      </div>
+    </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Guest {{ guest }}</h1>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Email</td>
+                        <td>Language</td>
+                        <td>Is Attending</td>
+                        <td>Is Child</td>
+                        <td>Last Login</td>
+                        <td>Access Code</td>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>{{ guest.user.first_name }} {{ guest.user.last_name }}</td>
+                        <td>{{ guest.user.email }}</td>
+                        <td>{{ guest.language }}</td>
+                        <td>{{ guest.is_attending }}</td>
+                        <td>{{ guest.is_child }}</td>
+                        <td>{{ guest.last_login }}</td>
+                        <td><a href="https://www.camiyaqui.com/login?access_code={{ guest.access_code }}">{{ guest.access_code }}</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <td>Date</td>
+                        <td>Page</td>
+                    </tr>
+                    </thead>
+                    {% for visit in guest.user.visits.all %}
+                        <tr>
+                        <td>{{ visit.timestamps }}</td>
+                        <td>{{ visit.page }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12"></div>
+        </div>
+
+    </div>
+{% endblock %}

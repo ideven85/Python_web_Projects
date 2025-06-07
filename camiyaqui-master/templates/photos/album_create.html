@@ -1,0 +1,28 @@
+{% extends 'ourwedding/base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+  <section class="sample-text-area">
+    <div class="container">
+      <h3 class="text-heading title_color">{% trans "Create Your Album!" %}</h3>
+      <p class="lead">{% blocktrans %}Help us get the best collection of photos!{% endblocktrans %}</p>
+      <div class='row'>
+        <div class='col-6 offset-3'>
+          <div class="card">
+            <div class="card-header">
+              Create a new album
+            </div>
+            <div class="card-body">
+              <form method="post" novalidate>
+                  {% csrf_token %}
+                  {% include 'includes/form.html' %}
+                <button class="btn" type="submit">Save</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

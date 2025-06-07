@@ -1,0 +1,88 @@
+{% extends 'ourwedding/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+    <!--================Home Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner banner_box d-flex align-items-center">
+            <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0"
+                 data-background=""></div>
+            <div class="container">
+                <div class="banner_content text-center">
+                    <h2>{% trans "Wedding Details" %}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================Blog Area =================-->
+    <section class="blog_area single-post-area p_120">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 posts-list">
+                    <div class="single-post row">
+                        <div class="col-lg-12">
+                            <div class="feature-img">
+                                <img class="img-fluid" src="{% static 'ourwedding/img/cami_y_aqui_2.jpg' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="col blog_details">
+                            <h2>{% trans "Location" %}</h2>
+                            <p>{% trans "The wedding will be held at <b>Estancia La Linda</b>" %}</p>
+                            <h5>{% trans "Date: Saturday, 19 October 2019" %}</h5>
+                            <h5>{% trans "Time: 17.00" %}</h5>
+                            <h5>{% trans "Address: Manuel Luis de Oliden 4651, B1664 Tortuguitas, BA Arg." %}</h5>
+                            <h2>{% trans "Getting there and away" %}</h2>
+                            <p>
+                                {% trans "We are organizing transport to and from the venue. Vans will depart from the neighborhood of Palermo, very close to Ministro Carranza subway station at 4pm (sharp!)." %}
+                            </p>
+                            <p>
+                                {% trans "If you would like to make use of the vans, we kindly ask you to visit <a href='/me'>your profile</a> and select the option. This will help us keep track of the amount of people who need the vans." %}
+                            </p>
+                            <p>{% trans "Moreover, if you check the guest list, you may find people who come by car. If you know them, you may arrange to go together!" %}</p>
+                            <h2>{% trans "The Ceremony" %}</h2>
+                            <p>{% trans "We are going to hold a symbolic ceremony, officiated by a friend." %}</p>
+                            <p>{% trans "As you may imagine, legally speaking for us is more convenient to get legally married in The Netherlands." %}</p>
+                            <p>{% trans "If you would like to say some words, contact us!" %}</p>
+                            <h2>{% trans "Gift" %}</h2>
+                            <p>{% trans "A lot of people asked us about what to do with the gift. We thank you all for your good intentions!" %}<br />
+                                {% trans "If you really want to give us something, you can do it during the wedding party." %}<br />
+                                {% trans "If it is a physical present, bear in mind that we have limited space in our luggage when we go back home." %}<br />
+                                {% trans "If you would like to give us money, please exchange it to either US dollars or Euros." %}
+                            </p>
+                            <h2>{% trans "The Menu" %}</h2>
+                            <p>{% trans "We are closing down the options on the menu, we will update here once we know it!" %}</p>
+                            <h2>{% trans "The Party" %}</h2>
+                            <p>{% trans "We are finishing the details of the party. We will update as soon as we can!" %}</p>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="row py-3">
+                                <div class="col-6">
+                                    <img class="img-fluid" src="{% static 'ourwedding/img/la-linda/gal010.jpg' %}"
+                                         alt="">
+                                </div>
+                                <div class="col-6">
+                                    <img class="img-fluid" src="{% static 'ourwedding/img/la-linda/gal011.jpg' %}"
+                                         alt="">
+                                </div>
+                            </div>
+                            <div class="row py-3">
+                                <div class="col-6">
+                                    <img class="img-fluid" src="{% static 'ourwedding/img/la-linda/gal012.jpg' %}"
+                                         alt="">
+                                </div>
+                                <div class="col-6">
+                                    <img class="img-fluid" src="{% static 'ourwedding/img/la-linda/gal013.jpg' %}"
+                                         alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Blog Area =================-->
+{% endblock %}

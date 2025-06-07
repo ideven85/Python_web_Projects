@@ -1,0 +1,274 @@
+{% extends 'savethedate/base.html' %}
+{% load static %}
+{% block content %}
+    <!-- Background image -->
+    <div class="page-image-bg reveal scale-in"></div>
+    <!-- END Background image -->
+    <!-- Overlay -->
+    <div class="overlay-bg-black overlay-opacity"></div>
+    <!-- END Overlay -->
+    <div id="info" class="col-md-12 text-white text-center page-info col-transform">
+        <div class="title-front">Nos casamos!</div>
+        <div class="logo">
+            <img src="{% static 'save-the-date/img/logo.png' %}" alt=""/>
+        </div>
+        <div class="all-title">
+            Camila <span>&amp;</span> Aquiles
+        </div>
+        <div class="countdown-title">
+            Cuenta regresiva
+        </div>
+        <!-- Countdown -->
+        <div id="countdown"></div>
+        <!-- END Countdown -->
+        <div class="title-date">
+            <span class="swirl-left"><span class="swirl-right">19<span>.</span>10<span>.</span>2019</span></span>
+        </div>
+        <div class="title-under">Agenda la fecha</div>
+        <!--<i class="icon ico-l-sm icon-l-arrows-slim-down-dashed animated fadeInDown"></i>-->
+        <a class="btn btn-border-white show-info animated fadeInUp" role="button" data-href="#content">M&aacute;s
+            info</a>
+    </div>
+    <div id="content" class="page-content col-md-6 text-center bg-white">
+        <!-- Happy Couple -->
+        <section class="section">
+            <!-- Section Title Happy Couple -->
+            <h2 class="section-title">
+                <span>Pareja feliz</span>
+            </h2>
+            <!-- END Section Title Happy Couple -->
+            <div class="row single-happy-wrapp">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="single-happy">
+                        <img src="{% static 'save-the-date/img/gallery/Cami.jpg' %}" alt="">
+                        <div class="info-box">
+                            <div class="info-box-wrap">
+                                <div class="overlay-info-box"></div>
+                                <div class="info-box-text">
+                                    <h3>Cami</h3>
+                                    <span>dice de Aqui</span>
+                                    <!--<div style="height:220px;width:300px;border:1px solid #ccc;font:16px/26px ;overflow:auto;">-->
+                                    <p>Aqui es un amoooor. Me encanta su carita de entusiasmo cuando me cuenta cosas.
+                                        Amo su apoyo en el día a día, sus gestos, como esperándome siempre con el
+                                        desayuno hecho cuando yo vuelvo de correr, o haciéndome el aguante cuando tengo
+                                        que trabajar algún fin de semana. Lo que me derritió fue la fiesta sopresa que
+                                        organizó para mi cumpleaños! Aqui es muy tierno, un divino! Un chico lleno de
+                                        optimismo y mucha sabiduría. :)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-happy-and">&amp;</div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="single-happy">
+                        <img src="{% static 'save-the-date/img/gallery/Aqui.jpg' %}" alt="">
+                        <div class="info-box">
+                            <div class="info-box-wrap">
+                                <div class="overlay-info-box"></div>
+                                <div class="info-box-text">
+                                    <h3>Aqui</h3>
+                                    <span>dice de Cami</span>
+                                    <p>Cami fue amor a primera vista, desde que la escuché reir por primera vez. Me
+                                        encanta su manera de ser, la espontaneidad y la dulzura con la que vive todos
+                                        los días. Cami me apoya con cualquier locura y se que voy a poder contar toda mi
+                                        vida con una compañera inigualable. Nada me pone más feliz cada mañana que
+                                        despertarme y encontrarla a mi lado y saber que así van a comenzar todo los días
+                                        de mi vida.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Happy Couple -->
+        <!-- Love Story -->
+        <section class="section">
+            <!-- Section Title Love Story -->
+            <h2 class="section-title t60">
+                <span>Historia de Amor</span>
+            </h2>
+            <!--END Section Title Love Story -->
+            <div class="container w100">
+                <div class="story-section">
+                    <div class="story-line hidden-xs"></div>
+                    <div class="row">
+                        <div class="time col-md-6 col-sm-6 col-xs-12">
+                            <div class="story-content left animated">
+                                <div class="story-c-block">
+                                    <div class="col-md-6 col-sm-6">
+                                        <h3>Nos conocimos</h3>
+                                        <span class="story-date">20 de Junio de 2016</span>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <img src="{% static 'save-the-date/img/gallery/IMG_0946.jpg' %}" alt=""
+                                             class="img-responsive"/>
+                                    </div>
+                                </div>
+                                <p class="text-right">A Cami le gusta contar que ella se coló a la fiesta de cumpleaños
+                                    de Aqui. En parte verdad, en parte fantasía, el hecho es que nos conocimos en
+                                    Amsterdam durante una fiesta. </p>
+                            </div>
+                        </div>
+                        <div class="date col-md-6 col-sm-6 col-xs-12">
+                            <div class="story-content right animated">
+                                <div class="story-c-block">
+                                    <div class="col-md-6 col-sm-6">
+                                        <img src="{% static 'save-the-date/img/gallery/UJAC8440.jpg' %}" alt=""
+                                             class="img-responsive"/>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <h3 class="pull-right">Nuestra primera cita</h3>
+                                        <span class="story-date">5 de Agosto de 2016</span>
+                                    </div>
+                                </div>
+                                <p>Nuestra primera cita fue en el On the Roof! Escuchamos al Quinteto de Franz Von
+                                    Chossy, charlamos de todo y terminamos la velada en un bar de cocktails :D
+                                </p>
+                            </div>
+                        </div>
+                        <div class="together col-md-6 col-sm-6 col-xs-12">
+                            <div class="story-content left animated">
+                                <div class="story-c-block">
+                                    <div class="col-md-6 col-sm-6">
+                                        <h3>Vivimos juntos</h3>
+                                        <span class="story-date">1ero de Diciembre 2016</span>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <img src="{% static 'save-the-date/img/gallery/IMG_0907.jpg' %}" alt=""
+                                             class="img-responsive"/>
+                                    </div>
+                                </div>
+                                <p class="text-right">Aqui cayó en paracaídas al departamentito de Cami en Leiden, y
+                                    ella lo recibió con amor. Después de un par de meses se mudaron a un departamento un
+                                    poco más grande en Amsterdam, donde viven muy felices.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="offer col-md-6 col-sm-6 col-xs-12">
+                            <div class="story-content right animated">
+                                <div class="story-c-block">
+                                    <div class="col-md-6 col-sm-6">
+                                        <img src="{% static 'save-the-date/img/gallery/IMG_5829.jpg' %}" alt=""
+                                             class="img-responsive"/>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <h3 class="pull-right">Nos decidimos!</h3>
+                                        <span class="story-date">4 de Septiembre 2018</span>
+                                    </div>
+                                </div>
+                                <p>Hacía un par de meses que lo charlábamos, pero no nos decidíamos, es un gran paso.
+                                    Una tarde en el sur de Italia caminábamos en busca de un puente medieval, sin darnos
+                                    cuenta la romántica atmósfera calabresa nos envolvió y no pudimos parar de decirnos
+                                    te amo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END Love Story -->
+        <!-- Gallery -->
+        <section class="section section-gallery" id="gallery">
+            <!-- Section Title Gallery -->
+            <h2 class="section-title t60">
+                <span>Nuetros momentos</span>
+            </h2>
+            <!-- END Section Title Gallery -->
+            <!-- Gallery Images -->
+            <div class="gallery-images row">
+                <div class="col-lg-4 col-md-4 col-sm-4 no-space">
+                    <div class="bearr-gallery-item">
+                        <a href="{% static 'save-the-date/img/gallery/IMG_5845.jpg' %}">
+                            <img src="{% static 'save-the-date/img/gallery/IMG_5845.jpg' %}" alt="">
+                            <div class="fade-icon">
+                                <span class="icon"><i class="icon icon-heart"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 no-space">
+                    <div class="bearr-gallery-item">
+                        <a href="{% static 'save-the-date/img/gallery/IMG_3218.jpg' %}">
+                            <img src="{% static 'save-the-date/img/gallery/IMG_3218.jpg' %}" alt="">
+                            <div class="fade-icon">
+                                <span class="icon"><i class="icon icon-heart"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 no-space">
+                    <div class="bearr-gallery-item">
+                        <a href="{% static 'save-the-date/img/gallery/IMG_3503.jpg' %}">
+                            <img src="{% static 'save-the-date/img/gallery/IMG_3503.jpg' %}" alt="">
+                            <div class="fade-icon">
+                                <span class="icon"><i class="icon icon-heart"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 no-space">
+                    <div class="bearr-gallery-item">
+                        <a href="{% static 'save-the-date/img/gallery/IMG_3736.jpg' %}">
+                            <img src="{% static 'save-the-date/img/gallery/IMG_3736.jpg' %}" alt="">
+                            <div class="fade-icon">
+                                <span class="icon"><i class="icon icon-heart"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 no-space">
+                    <div class="bearr-gallery-item">
+                        <a href="{% static 'save-the-date/img/gallery/IMG_4054.jpg' %}">
+                            <img src="{% static 'save-the-date/img/gallery/IMG_4054.jpg' %}" alt="">
+                            <div class="fade-icon">
+                                <span class="icon"><i class="icon icon-heart"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 no-space">
+                    <div class="bearr-gallery-item">
+                        <a href="{% static 'save-the-date/img/gallery/IMG_5230.jpg' %}">
+                            <img src="{% static 'save-the-date/img/gallery/IMG_5230.jpg' %}" alt="">
+                            <div class="fade-icon">
+                                <span class="icon"><i class="icon icon-heart"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- END Gallery Images -->
+        </section>
+        <!-- END Gallery -->
+        <!-- Our Wedding Location -->
+        <section class="section">
+            <!-- Section Title Our Wedding Location -->
+            <h2 class="section-title t60">
+                <span>El lugar de nuestro casamiento</span>
+            </h2>
+            <!-- END Section Title Our Wedding Location -->
+            <div class="wrapp location">
+                <div class="col-sm-12 no-space location-block">
+                    <div class="section-activity">
+                        <h2>Estancia la Linda</h2>
+                        <p>Manuel Luis de Oliden 4651,
+                            B1664 Tortuguitas,</br>
+                            Buenos Aires, Argentina</p>
+                        <img src="{% static 'save-the-date/img/gallery/Estancia_La_linda.jpg' %}" alt=""
+                             class="img-responsive, center"/>
+                        <img src="{% static 'save-the-date/img/gallery/map_estancia.jpg' %}" alt=""
+                             class="img-responsive, center"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="footer copyrights">
+            <div class="copyright">&copy; 2018 Cami Y Aqui</div>
+        </div>
+        <!-- END Copyright -->
+    </div>
+{% endblock %}

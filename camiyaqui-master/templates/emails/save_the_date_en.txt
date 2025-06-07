@@ -1,0 +1,12 @@
+Dear {{ guest.name }},
+We have great news! We are getting married!
+Save the date: October 19th, 2019.
+We have found a great country house in Buenos Aires, Argentina.
+
+If you want to learn more, copy paste this address into your browser:
+
+{{ save_the_date_link }}
+
+We hope you can join us to make it an unforgettable day.
+
+Cami & Aqui

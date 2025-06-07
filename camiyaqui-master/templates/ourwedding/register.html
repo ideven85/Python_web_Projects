@@ -1,0 +1,46 @@
+{% extends 'ourwedding/base.html' %}
+{% load i18n %}
+{% block navbar %}
+{% endblock %}
+{% block footer %}
+{% endblock %}
+
+{% block content %}
+    <section class="reservation_form_area pt-3 mt-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="res_form_inner">
+                        {% if form %}
+                            <div class="form_title">
+                                <h2>{% blocktrans %}Register{% endblocktrans %}</h2>
+                                <p>{% blocktrans %}If you are seeing this is because we want you to come to our wedding,
+                                    but
+                                    we were missing some of your details.{% endblocktrans %}</p>
+                                <p>{% blocktrans %}Please fill your information so you can enjoy the rest of the website
+                                    and
+                                    the big event!{% endblocktrans %}</p>
+                                <p>{% blocktrans %}Even if you can't make it to the wedding, but would like to see the
+                                    photos, messages, etc. register to keep in touch.{% endblocktrans %}</p>
+                            </div>
+
+                            <form class="form" method="post" novalidate>
+                                {% csrf_token %}
+                                {% include 'includes/form.html' %}
+                                <button class="btn btn-lg btn-primary btn-block text-uppercase"
+                                        type="submit">{% trans "Send" %}
+                                </button>
+                            </form>
+                        {% else %}
+                            <div class="form_title">
+                                <h2>{% trans "Thank you" %}</h2>
+                                <p>{% trans "We will review the registration and let you know!" %}</p>
+                            </div>
+                        {% endif %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

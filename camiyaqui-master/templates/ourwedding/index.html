@@ -1,0 +1,94 @@
+{% extends 'ourwedding/base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+    <!--================Home Banner Area =================-->
+<section class="home_banner_area">
+        <div class="banner_inner d-flex align-items-center">
+            <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0"
+                 data-background=""></div>
+            <div class="container">
+                <div class="banner_content text-center">
+                    <img src="{% static 'ourwedding/img/banner/shap-1.png' %}" alt="" vspace="10">
+                    <h4>{% trans "The Wedding of" %}</h4>
+                    <div class="all-title">Camila <span>&amp;</span> Aquiles</div>
+                    <!--<h3>Camila Y Aquiles</h3>-->
+                    <img src="{% static 'ourwedding/img/banner/shap-2.png' %}" alt="" vspace="30">
+                        <div class="title-date" style="font-size:45px">
+                            <span class="swirl-left"><span class="swirl-right">19<span>.</span>10<span>.</span>2019</span></span>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================Story Area =================-->
+    <section class="story_area p_120">
+        <div class="container">
+            <div class="main_title">
+                <h2>{% trans "Hello!" %}</h2>
+
+                <p>{% blocktrans %}Welcome to our wedding website. Here you will find all the information needed
+                    to make it to our wedding, and to have the best time of our lives! {% endblocktrans %}</p>
+                <p>{% blocktrans %}The most important thing is to let us know whether you will be joining. Head over to
+                    <a href="/rsvp">RSVP</a> to quickly inform us and add your +1 in case you come with company. {% endblocktrans %}</p>
+                <p>{% blocktrans %}You can also tell us a bit more of yourself my editing <a href="/me">Your profile</a>.
+                    You can tell us about your dietary restrictions, update your phone number, etc. {% endblocktrans %}</p>
+                <p>{% blocktrans %}In case you have questions or comments, <a href="/contact">contact us</a>, and we will
+                    both instantly receive your message.{% endblocktrans %}</p>
+                <p>{% blocktrans %}We hope to see you soon in Buenos Aires!{% endblocktrans %}</p>
+                <h2 align="right">Camila &amp Aquiles</h2>
+            </div>
+        </div>
+    </section>
+    <!--<section class="story_area p_120">
+        <div class="container">
+            <div class="row story_inner">
+                <div class="col-lg-4">
+                    <img class="img-fluid" src="{% static 'ourwedding/img/Aqui.jpg' %}" alt="">
+                </div>
+                <div class="col-lg-4">
+                    <div class="story_text">
+                        <h3>{% trans "Cordially Invited" %}</h3>
+                        <p>{% trans "On the 19th of October, 2019, Estancia La Linda, Buenos Aires, Argentina." %}</p>
+                        {#                        <a class="main_btn" href="#">View Our Story</a>#}
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <img class="img-fluid" src="{% static 'ourwedding/img/Cami.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!--================End Story Area =================-->
+
+    <!--================Timer Area =================-->
+    <!--<section class="timer_area">
+        <div class="container box_1620">
+            <div class="timer_inner p_120">
+                <h5>{% trans "Countdown until we are getting married!" %}</h5>
+                <div id="timer" class="timer">
+                    <div class="timer__section days">
+                        <div class="timer__number"></div>
+                        <div class="timer__label">{% trans "Days" %}</div>
+                    </div>
+                    <div class="timer__section hours">
+                        <div class="timer__number"></div>
+                        <div class="timer__label">{% trans "Hours" %}</div>
+                    </div>
+                    <div class="timer__section minutes">
+                        <div class="timer__number"></div>
+                        <div class="timer__label">{% trans "Minutes" %}</div>
+                    </div>
+                    <div class="timer__section seconds">
+                        <div class="timer__number"></div>
+                        <div class="timer__label">{% trans "Seconds" %}</div>
+                    </div>
+                </div>
+                <p>{% trans "are remaining" %}</p>
+            </div>
+        </div>
+    </section>-->
+    <!--================End Timer Area =================-->
+{% endblock %}

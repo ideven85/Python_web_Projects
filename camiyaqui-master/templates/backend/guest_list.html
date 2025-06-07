@@ -1,0 +1,85 @@
+{% extends 'backend/base_backend.html' %}
+{% block content %}
+  <div class="container">
+    <div class="page-header">
+      <h1>Guests waiting approval</h1>
+    </div>
+    <div class="page-content">
+      <table class="table table-bordered">
+        <thead class="table-head">
+        <tr>
+          <td>Guest</td>
+          <td>e-mail</td>
+          <td>Invited By</td>
+          <td>Is Coming</td>
+          <td>Approve</td>
+        </tr>
+        </thead>
+          {% for guest in guests_waiting %}
+            <tr>
+              <td><a href="{% url 'guest' guest.pk %}">{{ guest }}</a>
+              </td>
+              <td>{{ guest.email }}</td>
+              <td>{{ guest.invited_by.first_name }} {{ guest.invited_by.last_name }}</td>
+              <td>{{ guest.is_attending }}</td>
+              <td>
+                <form method="post" action="{% url 'guest-approve' guest.id %}">{% csrf_token %}
+                  <button type="submit" class="btn btn-info">Approve</button>
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+      </table>
+      <h1>Guests already approved</h1>
+      <div class="row"><a href="{% url 'export-guests' %}">Export Guests</a></div>
+      <div class="row">
+        <div class="col-3"><h3>Confirmed:</h3>{{ coming_guests }}</div>
+        <div class="col-3"><h3>Unsure:</h3>{{ unsure_guests }}</div>
+        <div class="col-3"><h3>Not coming:</h3>{{ not_coming_guests }}</div>
+        <div class="col-3>"><h3>Need van:</h3>{{ need_van }}</div>
+      </div>
+      <table class="table table-bordered">
+        <thead class="table-head">
+        <tr>
+          <td>Guest Name</td>
+          <td>e-mail</td>
+          <td>Last Login</td>
+          <td>Is Coming</td>
+          <td>Has Car</td>
+          <td>Needs Van</td>
+          <td>Invited By</td>
+        </tr>
+        </thead>
+          {% for guest in guests_approved %}
+            <tr>
+              <td><a href="{% url 'profile' guest.pk %}">{{ guest.first_name }} {{ guest.last_name }}</a>
+              </td>
+              <td>{{ guest.email }}</td>
+              <td>{{ guest.profile.last_login|date }}</td>
+              <td>{{ guest.profile.is_attending }}</td>
+              <td>{{ guest.has_car }}</td>
+              <td>{{ guest.needs_van }}</td>
+              <td>{{ guest.profile.invited_by }}</td>
+            </tr>
+          {% endfor %}
+      </table>
+      <h2>Children</h2>
+      <table class="table table-bordered">
+        <thead class="table-head">
+        <tr>
+          <td>Guest Name</td>
+          <td>Is Coming</td>
+          <td>Invited By</td>
+        </tr>
+        </thead>
+          {% for child in children %}
+            <tr>
+              <td>{{ child.first_name }} {{ child.last_name }}</td>
+              <td>{{ child.is_attending }}</td>
+              <td>{{ child.invited_by }}</td>
+            </tr>
+          {% endfor %}
+      </table>
+    </div>
+  </div>
+{% endblock %}

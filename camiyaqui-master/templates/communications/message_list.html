@@ -1,0 +1,76 @@
+{% extends 'backend/base_backend.html' %}
+{% load static %}
+{% block content %}
+    <div class="container mt-3">
+        <h1>Messages ready to be sent</h1>
+        <table class="table">
+            <thead class="thead-dark">
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>Language</td>
+                <td>Sent To</td>
+                <td>Opened</td>
+                <td>Clicked</td>
+                <td>Edit</td>
+                <td>Send</td>
+            </tr>
+            </thead>
+            {% for message in messages %}
+                <tr>
+                    <td>{{ message.id }}</td>
+                    <td>{{ message.name }}</td>
+                    <td>{{ message.get_language_display }}</td>
+                    <td>{{ message.sent_to.count }}</td>
+                    <td>{{ message.opened_by.count }}</td>
+                    <td>{{ message.clicked_by.count }}</td>
+                    <td><a href="{% url 'message_update' message.pk %}"><img
+                            src="{% static 'img/icons/avocado_edit.svg' %}"></a></td>
+                    <td>
+                        <form class="frm" action="{% url 'send-message' message.pk %}" id="{{ message.pk }}"
+                              method="post">
+                            <button class="btn" name="button" id="btn{{ message.pk }}">Send</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="container mt-3">
+        <a href="{% url 'new-message' %}">
+            <button class="btn-danger">Create New Message</button>
+        </a>
+    </div>
+{% endblock %}
+
+{% block footer_scripts %}
+    <script>
+        $(document).ready(function () {
+            $('form').submit(function (event) {
+                event.preventDefault();
+                var formID = $(this).attr('id');
+                var button = document.getElementById("btn"+formID);
+                console.log(button);
+                {#var button = $(this).getElementById("btn"+formID);#}
+                {#console.log(button);#}
+                {#console.log(formID);#}
+                $.ajax({
+                    type: "POST",
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    url: $(this).attr('action'),
+                    beforeSend: function () {
+                        {#button.prop("disabled", true);#}
+                        $(button).text("Sending");
+                    },
+                    success: function (data) {
+                        $(button).text("Sent");
+                    },
+                    error: function (data) {
+                        $("#newsletter_feedback").html('<div class="alert alert-danger" role="alert">An error ocurred, please try again!</div>');
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{% static 'ourwedding/img/favicon.png' %}" type="image/png">
+        <title>Cami y Aqui - Wedding 2019</title>
+
+    <!-- CC: Some css files from save-the-date page I love -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CClicker+Script" rel="stylesheet"
+        type="text/css">
+    <!-- Stylesheets -->
+    <!--<link href="{% static 'save-the-date/css/fontello-icon.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'save-the-date/css/linea-icon.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'save-the-date/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'save-the-date/css/simplelightbox.min.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'save-the-date/css/animate.css' %}" rel="stylesheet" type="text/css"/>
+    <link href="{% static 'save-the-date/css/flipclock.css' %}" rel="stylesheet" type="text/css"/>-->
+    <!-- Custom CSS -->
+    <!--<link href="{% static 'save-the-date/css/main.css' %}" rel="stylesheet" type="text/css"/>-->
+    <!-- Switcher color CSS -->
+    <link href="{% static 'save-the-date/css/color-1.css' %}" rel="stylesheet" type="text/css" id="skins"/>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'ourwedding/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'ourwedding/vendors/linericon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'ourwedding/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ourwedding/vendors/owl-carousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'ourwedding/vendors/lightbox/simpleLightbox.css' %}">
+    <link rel="stylesheet" href="{% static 'ourwedding/vendors/nice-select/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'ourwedding/vendors/animate-css/animate.css' %}">
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'ourwedding/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'ourwedding/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'ourwedding/css/custom.css' %}">
+    {% block extra_header %}{% endblock %}
+</head>
+<body>
+{% block navbar %}
+{% include 'ourwedding/navbar.html' %}
+{% endblock %}
+{% if messages %}
+    <section>
+        <div class="container">
+            {% for message in messages %}
+                <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    {{ message }}
+                </div>
+                </div>
+            {% endfor %}
+    </section>
+{% endif %}
+{% block content %}
+{% endblock %}
+{% block footer %}
+    {% include 'ourwedding/footer.html' %}
+{% endblock %}
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{% static 'ourwedding/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static 'ourwedding/js/popper.js' %}"></script>
+<script src="{% static 'ourwedding/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'ourwedding/js/stellar.js' %}"></script>
+<script src="{% static 'ourwedding/vendors/lightbox/simpleLightbox.min.js' %}"></script>
+<script src="{% static 'ourwedding/vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+<script src="{% static 'ourwedding/vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'ourwedding/vendors/isotope/isotope-min.js' %}"></script>
+<script src="{% static 'ourwedding/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'ourwedding/vendors/flipclock/timer.js' %}"></script>
+<script src="{% static 'ourwedding/js/jquery.ajaxchimp.min.js' %}"></script>
+<script src="{% static 'ourwedding/js/mail-script.js' %}"></script>
+<script src="{% static 'ourwedding/js/theme.js' %}"></script>
+{% block extra_footer_scritps %}
+{% endblock %}
+</body>
+</html>

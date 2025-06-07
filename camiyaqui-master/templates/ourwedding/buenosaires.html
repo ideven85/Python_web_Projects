@@ -1,0 +1,122 @@
+{% extends 'ourwedding/base.html' %}
+{% load i18n %}
+{% block content %}
+    <section class="banner_area">
+        <div class="banner_inner banner_box d-flex align-items-center">
+            <div class="overlay bg-parallax"
+                 style="background-image: url(/static/ourwedding/img/buenos_aires.jpeg); opacity:1; "></div>
+            <div class="container">
+                <div class="banner_content text-center">
+                    <h2>{% trans "Buenos Aires city" %}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================Info Area =================-->
+    <section class="sample-text-area">
+        <div class="container">
+            <h3 class="text-heading title_color">About Buenos Aires</h3>
+            <p class="sample-text">
+                If you are looking for information about where to stay, check the <a href="{% url 'accommodation' %}">dedicated
+                page</a>.
+            </p>
+            <p class="sample-text">
+                Buenos Aires is a huge city which offers plenty of options. Here we are going to highlight some of the
+                things we believe are some unforgettable activities for you. We are going to be around, so if you are
+                going to do something fun, let us know so we can join you!</p>
+            <h3 class="text-heading title_color">Activities</h3>
+            <p>Besides sightseeing, Buenos Aires offers plenty of activities worth doing. The <a
+                    href="http://www.cck.gob.ar/">Centro Cultural Kirchner</a> hosts a wealth of activities, from music
+                to plastic arts. Check the agenda to see if anything fits your taste. By the way, events are either
+                insanely cheap or free. <a href="http://www.teatrocolon.org.ar/en">Teatro Colón</a> is, despite decades
+                of economical upheaval, one of the top international houses for opera and classical music. Check the
+                agenda, and pay attention to general rehearsals which tend to be free. There are also guided tours, but
+                if you ask us, we would suggest you just to see and enjoy a show. <a
+                        href="http://www.labombadetiempo.com/">La Bomba de Tiempo</a> was (10 years ago) the best kept
+                secret for tourists. It was advertised as something <i>very typical</i> and tourists flocked like flies
+                to flames. It is, still, a pretty decent show to enjoy and dance. Be aware, though, that the
+                neighborhood is not the safest (and the show is on Mondays evenings. When you go out, stick with the
+                crowd till you are in a larger street with more transit. The same place, <a
+                        href="https://www.cckonex.org/">Centro Cultural Konex</a> has a wider variety of options.
+                Spanish speakers may enjoy the <a href="https://www.cckonex.org/">Blind Theater</a>. <a
+                        href="https://www.buenosaires.gob.ar/cultura/usina-del-arte">Usina del Arte</a> has an ever
+                updating agenda of events, all for free, but need to <a
+                        href="https://buenosaires.gob.ar/usinadelarte/entradas">register in advance.</a> There are
+                plenty of theaters, concert venues, etc. If we come to know of anything special, we will let you know in
+                here.</p>
+            <h3 class="text-heading title_color">Tango</h3>
+            <p>Oh yes, it deserves its special section. It doesn't matter if you dance or not, tango and Buenos Aires
+                can't be separated. If you are not a dancer, nor are willing to become one, you can check <a
+                        href="https://tangoporteno.com.ar/eng/">Tango Porteño</a>. Be warned, though, that a show will
+                never be <i>the real thing</i>, it is a show. If you want to enjoy tango as locals do, the best is to go
+                to places where tango is danced, also called <i>Milongas</i>. Most, if not all, milongas offer food and
+                drinks, which makes them ideal to go out and have a nice evening whether you dance or not. Our absolute
+                favorite is <a
+                        href="https://www.tripadvisor.com/Attraction_Review-g312741-d536169-Reviews-La_Catedral_Club-Buenos_Aires_Capital_Federal_District.html">La
+                    Catedral</a> (they have no website, so it is a trip advisor link). Entrance is dirt cheap (2€),
+                unless there is a show. Be aware that tango starts and ends late. Don't go at 8pm and expect to see more
+                than a bunch of foreigners in there. Best nights are Tuesday nights. Weekends are also very good. Quite
+                often on weekend nights there are performances from tango dancers and other artists. If you are willing
+                to go beyond the touristic spots, <a href="https://www.facebook.com/floreal.milonga">Floreal Milonga</a>
+                (Facebook link), happens every Sunday. It is a bit further away, but totally worth the trip. Just say
+                that Aquiles sent you! Don't expect a young crowd though. A very touristic place (and very fun as well)
+                is <a href="https://lavirutatangoclub.com/">La Viruta</a> (and yes, they are the underground space of an
+                Armenian Cultural Center!). They are one of the milongas which close the latest in the city. If you are
+                a woman, expect to be asked to dance by the many uber-foreign-friendly porteños. <a
+                        href="https://www.lonelyplanet.com/argentina/buenos-aires/entertainment/la-glorieta/a/poi-ent/1477517/363005">La
+                    Glorieta de Belgrano</a> is a nice, open air space where you can go to dance few tandas and continue
+                en route. Very informal, free. Be careful with your belongings, since people come and go quicker than
+                what you may realize. The list is endless. Just check <a
+                        href="https://www.hoy-milonga.com/buenos-aires/es">The listing</a> and pick one that interests
+                you.</p>
+            <h3 class="text-heading title_color">Learn Tango</h3>
+            <p>If you want to learn just for fun, you can go to <a href="https://lavirutatangoclub.com/">La Viruta</a>.
+                They have classes before the dancing floor opens. This is great if you want to break the ice with few
+                people you know they are the same level. Same is true for La Catedral, but I couldn't find information
+                about their classes. If you look for something more organized, check <a
+                        href="https://dni-tango.com/?lang=en">DNI Tango</a>. Their classes are structured into
+                weekly-blocks, with several levels, and also offer private and semi-private lessons. The advantage is
+                that they treat regulars with the same patience than they treat casuals. You will find many other places
+                to learn. Just be sure what the dynamic is. Most teachers allow pop-up students, but they won't pay
+                attention to them until they become regulars (nor the student will be able to catch up with the class
+                dynamics in few minutes).</p>
+            <h3 class="text-heading title_color">Around Buenos Aires</h3>
+            <p>Technically outside the city, <a
+                    href="https://turismo.buenosaires.gob.ar/en/article/visit-tigre-buenos-aires%E2%80%99-waterside-getaway">visiting
+                Tigre</a> is a great option to see something quite different. Tigre is best enjoyed by taking one of the
+                many boats that go around the river delta, and then having lunch/dinner on the mainland. If you go on a
+                weekend, you will see plenty of people rowing, sailing, and hanging out. Week days are very quiet, but
+                also enjoyable. <b>La Plata</b> is where Camila studied. Very nice city, about 1 hour away from Buenos
+                Aires by bus. You can enjoy the streets with lots of trees, parks. It is much more relaxed than Buenos
+                Aires, and the perfect get away for a day. If you are willing to go international, Uruguay is just
+                across the river (very wide river though), and makes it a perfect day(or two)-trip from Buenos Aires.
+                Colonia del Sacramento is just 50 minute by ferry away. It was a portuguese colony, in which you can
+                still enjoy very old constructions, the Plaza de Toros (sadly quite abandoned), cobblestone streets and
+                the ever lasting uruguayan hospitality. If you visit, don't forget to eat a <a
+                        href="https://en.wikipedia.org/wiki/Chivito_(sandwich)">Chivito Canadiense</a>. <br/>
+                If you are willing to make more than a day-trip, the closest cities which are worth visiting are Rosario
+                and Córdoba. Transport in Argentina is not first-class, which means that trains virtually do not exist,
+                planes are not very frequent nor cheap, and buses, which are very comfortable and frequent are also,
+                however, slow and expensive. Thus, plan ahead! We can't cover the entire country in one page, but you
+                are always welcome to <a href="{% url 'contact' %}">ask us</a> whatever it is that you want to know.
+            </p>
+            <h3 class="text-heading title_color">Urban Sight Seeing</h3>
+            <p>While Buenos Aires is a relatively modern city, it offers few nice sightseeing spots. From a
+                historical/political perspective, following <a
+                        href="https://www.google.com/maps/dir/Casa+Rosada,+Balcarce,+Buenos+Aires,+Argentina/Congreso+de+la+Naci%C3%B3n+Argentina,+Av.+Rivadavia+1864,+C1033AAV+CABA,+Argentina/@-34.6090884,-58.3858301,16z/data=!3m1!4b1!4m14!4m13!1m5!1m1!1s0x95a3352cbe276f75:0xe16921ef0545f86d!2m2!1d-58.3702778!2d-34.6080556!1m5!1m1!1s0x95bccac2cd859503:0x75cdafaaef2b946!2m2!1d-58.3926061!2d-34.6098208!3e2">Av.
+                    De Mayo from one end to the other</a> gives a great insight into the history of the country. You
+                will be connected the seat of the President (Casa Rosada) with the Congress. You can make a small detour
+                to see the <a href="http://www.teatrocolon.org.ar/en">Teatro Colón</a>, and if you are willing, you can
+                enter the <a href="https://palaciobarolo.com.ar/?lang=en">Palacio Barolo</a> to see what Italian
+                aristocrats were up to at the beginning of last century. Both <a
+                        href="https://turismo.buenosaires.gob.ar/en/atractivo/casa-rosada">Casa Rosada</a> and <a
+                        href="https://turismo.buenosaires.gob.ar/en/atractivo/national-congress-building">Congreso</a>
+                can be visited, check their times and days. A nice (and free) museum is the one <a
+                        href="https://www.casarosada.gob.ar/la-casa-rosada/museo">behind Casa Rosada</a>.</p>
+        </div>
+    </section>
+    <!--================End Info Area =================-->
+{% endblock %}
+

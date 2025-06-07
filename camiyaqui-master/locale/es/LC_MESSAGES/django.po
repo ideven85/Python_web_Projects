@@ -1,0 +1,874 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-27 06:56+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: camiyaqui/settings/common.py:104
+msgid "Spanish"
+msgstr "Español"
+
+#: camiyaqui/settings/common.py:105
+msgid "English"
+msgstr "Inglés"
+
+#: ourwedding/forms.py:17
+msgid "Wrong access code format"
+msgstr "Formato de código erróneo"
+
+#: ourwedding/forms.py:24
+msgid "Secret Code not Valid"
+msgstr "Código secreto no válido"
+
+#: ourwedding/forms.py:26
+msgid "Access Code Expired. Require a New one."
+msgstr "Código de acceso expirado. Pide uno nuevo"
+
+#: ourwedding/mixins.py:10
+msgid "Please login first"
+msgstr "Primero tienes que ingresar"
+
+#: ourwedding/models.py:32
+msgid "nickname"
+msgstr "apodo"
+
+#: ourwedding/models.py:33
+msgid "language"
+msgstr "idioma"
+
+#: ourwedding/models.py:34 ourwedding/models.py:112
+msgid "phone"
+msgstr "teléfono"
+
+#: ourwedding/models.py:39 ourwedding/models.py:110
+msgid "is attending"
+msgstr "Confirma"
+
+#: ourwedding/models.py:39 ourwedding/models.py:110
+msgid "Are you attending?"
+msgstr "¿Venís?"
+
+#: ourwedding/models.py:40 ourwedding/models.py:111
+msgid "is child"
+msgstr "es niño/a"
+
+#: ourwedding/models.py:40 ourwedding/models.py:111
+msgid "Under 12"
+msgstr "Menor de 12"
+
+#: ourwedding/models.py:42
+msgid "receive updates"
+msgstr "Recibir notificaciones"
+
+#: ourwedding/models.py:42
+msgid ""
+"Even if you are not attending, we can keep you in the loop with photos, etc."
+msgstr "Aún si no vienes, te podemos mantener al día con las novedades, etc."
+
+#: ourwedding/models.py:46
+msgid "Car"
+msgstr "Auto"
+
+#: ourwedding/models.py:46
+msgid "Do you have a car?"
+msgstr "Tenés auto?"
+
+#: ourwedding/models.py:47 ourwedding/models.py:116
+msgid "Van"
+msgstr "Combi"
+
+#: ourwedding/models.py:47 ourwedding/models.py:116
+msgid "Do you need transport?"
+msgstr "Necesitás Transporte?"
+
+#: ourwedding/models.py:49
+msgid "Coming from"
+msgstr "Viniendo desde"
+
+#: ourwedding/models.py:50 ourwedding/models.py:117
+msgid "pre wedding"
+msgstr "pre casamiento"
+
+#: ourwedding/models.py:50 ourwedding/models.py:117
+msgid "Are you attending the pre-wedding?"
+msgstr "¿Venís al encuentro pre-casamiento?"
+
+#: ourwedding/models.py:51 ourwedding/models.py:118
+msgid "post wedding"
+msgstr "post casamiento"
+
+#: ourwedding/models.py:51 ourwedding/models.py:118
+msgid "Are you attending the post-wedding?"
+msgstr "¿Venís al encuentro post-casamiento?"
+
+#: ourwedding/models.py:166
+msgid "message"
+msgstr "mensaje"
+
+#: ourwedding/models.py:171
+msgid "anecdote"
+msgstr "anécdota"
+
+#: ourwedding/models.py:172
+msgid "anecdotes"
+msgstr "Anécdotas"
+
+#: ourwedding/views.py:38
+msgid ""
+"You are already logged in as {}. Are you sure you want to register again?"
+msgstr ""
+"Ya ingresaste como {}. Estás seguro de que quieres registrarte de nuevo?"
+
+#: ourwedding/views.py:48
+msgid "The email you used is already registered. Try logging in."
+msgstr "Ese e-mail ya está registrado. Intenta ingresando."
+
+#: ourwedding/views.py:70
+#, python-brace-format
+msgid "Welcome back {user}!"
+msgstr "Bienvenido de vuelta {user}!"
+
+#: ourwedding/views.py:86
+msgid "Activation code sent. Check your e-mail"
+msgstr "Código enviado. Revisa tu e-mail."
+
+#: ourwedding/views.py:90
+msgid "We are reviewing your request to join the party. Be patient."
+msgstr "Estamos revisando tu aplicación. Sé paciente."
+
+#: ourwedding/views.py:92
+msgid "That e-mail is not on our database. Consider registering"
+msgstr "Ese e-mail no está en nuestra base de datos. Considera registrarte."
+
+#: ourwedding/views.py:95
+msgid "There were errors processing your form"
+msgstr "Hubo errores procesando el formulario"
+
+#: ourwedding/views.py:104
+msgid "Thanks for updating your profile."
+msgstr "Gracias por actualizar tu perfil"
+
+#: ourwedding/views.py:115
+msgid "Thank you for the message! We will come back to you as soon as possible"
+msgstr "Gracias por el mensaje! Te responderemos lo antes posible."
+
+#: ourwedding/views.py:152
+msgid "You can't edit a guest from a different group"
+msgstr "No puedes editar un invitado de otro grupo"
+
+#: templates/ourwedding/accommodation.html:9
+msgid "Accommodation"
+msgstr "Alojamiento"
+
+#: templates/ourwedding/accommodation.html:10
+msgid "Looking for a place to stay"
+msgstr "Buscando un lugar donde quedarse"
+
+#: templates/ourwedding/add_guest.html:5
+msgid "New guest information"
+msgstr "Información de %(guest)s"
+
+#: templates/ourwedding/add_guest.html:6
+msgid "Add the information you think is relevant"
+msgstr "Agrega la información que creas relevante"
+
+#: templates/ourwedding/buenosaires.html:10
+msgid "Buenos Aires city"
+msgstr "Buenos Aires"
+
+#: templates/ourwedding/event.html:8
+msgid "Planned Events"
+msgstr "Eventos planeados"
+
+#: templates/ourwedding/event.html:9
+msgid ""
+"These are the events we have planned up to now. Keep tuned because we may "
+"add new\n"
+"          ones!"
+msgstr ""
+"Estos son eventos que estamos planeando. Mantente al tanto porque podemos "
+"agregar eventos nuevos!"
+
+#: templates/ourwedding/event.html:17
+msgid "Pre-Wedding Meetup"
+msgstr "Reunión pre-casamiento"
+
+#: templates/ourwedding/event.html:18
+msgid ""
+"Because several guests are traveling from far, we are meeting on the evening "
+"before to say welcome!"
+msgstr ""
+"Debido a que muchos invitados estan llegando desde muy lejos, nos estamos "
+"reuniendo la noche anterior al casamiento para darles la bienvenida! "
+
+#: templates/ourwedding/event.html:20
+msgid "Date: Friday, 18 October 2019"
+msgstr "Fecha: Viernes 18 de Octubre de 2019"
+
+#: templates/ourwedding/event.html:21
+msgid "Time: 19.00"
+msgstr "Hora: 19.00"
+
+#: templates/ourwedding/event.html:22
+msgid "Address: Santa Fe 5183"
+msgstr "Dirección: Santa Fe 5183"
+
+#: templates/ourwedding/event.html:31
+msgid "Wedding Ceremony"
+msgstr "Ceremonia"
+
+#: templates/ourwedding/event.html:32
+msgid ""
+"Join us in this very special moment and hear us say yes to each other. We "
+"will add more information soon!"
+msgstr ""
+"Únetenos en este momento tan especial cuando nos decimos 'si'. Agregaremos "
+"más información pronto!"
+
+#: templates/ourwedding/event.html:34 templates/ourwedding/wedding.html:34
+msgid "Date: Saturday, 19 October 2019"
+msgstr "Fecha: Sábado 19 de Octubre de 2019"
+
+#: templates/ourwedding/event.html:35 templates/ourwedding/wedding.html:35
+msgid "Time: 17.00"
+msgstr "Hora: 17.00"
+
+#: templates/ourwedding/event.html:36 templates/ourwedding/wedding.html:36
+msgid "Address: Manuel Luis de Oliden 4651, B1664 Tortuguitas, BA Arg."
+msgstr "Direción: Manuel Luis de Oliden 4651, B1664 Tortuguitas, BA Arg."
+
+#: templates/ourwedding/event.html:46
+msgid "Post-Wedding"
+msgstr "Post-Casamiento"
+
+#: templates/ourwedding/event.html:47
+msgid ""
+"A good opportunity to say goodbye to the guests who came from far and close. "
+"Join us on a relaxed sunday afternoon!"
+msgstr "Una linda oportunidad para despedirnos de los invitados que vinieron de lejos y de cerca."
+"Sumáte a una tarde de domingo relajada!"
+
+#: templates/ourwedding/event.html:49
+msgid "Date: Sunday, 20 October 2019"
+msgstr "Fecha: Domingo 20 de Octubre de 2019"
+
+#: templates/ourwedding/event.html:50
+msgid "Time: 15.00"
+msgstr "Hora: 15.00"
+
+#: templates/ourwedding/event.html:51
+msgid "Address: TBD"
+msgstr "Dirección: A confirmar"
+
+#: templates/ourwedding/footer.html:9 templates/ourwedding/navbar.html:21
+msgid "Home"
+msgstr "Inicio"
+
+#: templates/ourwedding/footer.html:10
+msgid "Your Profile"
+msgstr "Mi Perfil"
+
+#: templates/ourwedding/footer.html:11 templates/ourwedding/navbar.html:68
+msgid "Invitation"
+msgstr "Invitación"
+
+#: templates/ourwedding/footer.html:12 templates/ourwedding/navbar.html:57
+msgid "Event"
+msgstr "Evento"
+
+#: templates/ourwedding/footer.html:13 templates/ourwedding/navbar.html:25
+#: templates/ourwedding/navbar.html:27
+msgid "RSVP"
+msgstr "RSVP"
+
+#: templates/ourwedding/footer.html:14 templates/ourwedding/navbar.html:65
+msgid "Contact"
+msgstr "Contacto"
+
+#: templates/ourwedding/footer.html:15 templates/ourwedding/help.html:22
+msgid "Help"
+msgstr "Ayuda"
+
+#: templates/ourwedding/group_detail.html:7
+msgid "Please, let us know if you are attending the ceremony"
+msgstr "Por favor, déjanos saber si vendrás a la ceremonia"
+
+#: templates/ourwedding/group_detail.html:11
+#: templates/ourwedding/guest_list.html:11
+msgid "Name"
+msgstr "Nombre"
+
+#: templates/ourwedding/group_detail.html:12
+#: templates/ourwedding/guest_list.html:12
+msgid "Is Attending"
+msgstr "Confirma"
+
+#: templates/ourwedding/group_detail.html:13
+msgid "Pre Wedding"
+msgstr "Pre Casamiento"
+
+#: templates/ourwedding/group_detail.html:14
+msgid "Post Wedding"
+msgstr "Post Casamiento"
+
+#: templates/ourwedding/group_detail.html:15
+#: templates/ourwedding/guest_list.html:14
+msgid "Has Car"
+msgstr "Tiene Auto"
+
+#: templates/ourwedding/group_detail.html:16
+msgid "Needs Van"
+msgstr "Necesita Transporte"
+
+#: templates/ourwedding/group_detail.html:17
+msgid "Is Child"
+msgstr "Es Niño"
+
+#: templates/ourwedding/group_detail.html:27
+#: templates/ourwedding/group_detail.html:70
+msgid "Yes"
+msgstr "Sí"
+
+#: templates/ourwedding/group_detail.html:30
+#: templates/ourwedding/group_detail.html:73
+msgid "No"
+msgstr "No"
+
+#: templates/ourwedding/group_detail.html:33
+#: templates/ourwedding/group_detail.html:76
+msgid "Don't Know "
+msgstr "No sé"
+
+#: templates/ourwedding/group_detail.html:114
+#: templates/ourwedding/new_message.html:17
+msgid "Submit"
+msgstr "Enviar"
+
+#: templates/ourwedding/group_detail.html:119
+msgid "Add Another"
+msgstr "Agregar Otro"
+
+#: templates/ourwedding/guest_list.html:7
+msgid ""
+"Here you will find all the invited guest. If you think someone is missing, "
+"let us know!"
+msgstr ""
+"Aquí encontrarás a todos los invitados. Si crees que falta alguien, avisanos!"
+
+#: templates/ourwedding/guest_list.html:13
+msgid "Coming From"
+msgstr "Viniendo desde"
+
+#: templates/ourwedding/guest_list.html:15
+msgid "Needs Transport"
+msgstr "Necesito Transporte"
+
+#: templates/ourwedding/help.html:26
+msgid "What is the Secret Code?"
+msgstr "Qué es el código secreto?"
+
+#: templates/ourwedding/help.html:27
+msgid ""
+"The secret code is your way of accessing this website. It is unique and it "
+"is\n"
+"                        valid for 15 days. "
+msgstr ""
+"El código secreto es la llave para acceder a este sitio. Es único y es "
+"válido por 15 días."
+
+#: templates/ourwedding/help.html:31
+msgid "How do I get the Secret Code?"
+msgstr "Cómo obtengo un Código Secreto?"
+
+#: templates/ourwedding/help.html:32
+#, python-format
+msgid ""
+"If your e-mail is on our database, just ask a new one\n"
+"                        <a href=\"%(url_login)s\">here</a> and you will "
+"receive it by e-mail. Then you will be able to\n"
+"                        log in. If your e-mail is not on our database, "
+"follow the steps to\n"
+"                        <a href=\"%(url_register)s\">register</a> and we "
+"will get back to you as soon as\n"
+"                        possible."
+msgstr ""
+"Si tu e-mail está en nuestra base de datos, simplemente pide uno <a href="
+"\"%(url_login)s\">aquí</a> y lo recibirás por e-mail.\n"
+"Si tu e-mail no está en nuestra base de datos, sigue los pasos para <a href="
+"\"%(url_register)s\">registrarse</a>"
+
+#: templates/ourwedding/help.html:39
+msgid "How do I contact you?"
+msgstr "Cómo los contacto?"
+
+#: templates/ourwedding/help.html:40
+#, python-format
+msgid ""
+"If you are logged in, you can use the\n"
+"                        <a href=\"%(url_contact)s\">contact form</a>. This "
+"is the fastest way of reaching out. If you\n"
+"                        are not logged in, send us an e-mail to\n"
+"                        <a href=\"mailto:camiyaqui@camiyaqui.com"
+"\">camiyaqui@camiyaqui.com</a>"
+msgstr ""
+"Si accediste al sitio, podés usar <a href=\"%(url_contact)s\">el formulario "
+"de contact</a>. Si no, podés mandarnos un e-mail a <a href=\"mailto:"
+"camiyaqui@camiyaqui.com\">camiyaqui@camiyaqui.com</a>"
+
+#: templates/ourwedding/index.html:13
+msgid "The Wedding of"
+msgstr "El Casamiento de"
+
+#: templates/ourwedding/index.html:30
+msgid "Hello!"
+msgstr "Hola"
+
+#: templates/ourwedding/index.html:32
+msgid ""
+"Welcome to our wedding website. Here you will find all the information "
+"needed\n"
+"                    to make it to our wedding, and to have the best time of "
+"our lives! "
+msgstr ""
+"Bienvenido al sitio web de nuestro casamiento. Aquí encontrarás toda la "
+"información que necesitarás para participar junto a nostros de este día tan "
+"especial"
+
+#: templates/ourwedding/index.html:34
+msgid ""
+"The most important thing is to let us know whether you will be joining. Head "
+"over to\n"
+"                    <a href=\"/rsvp\">RSVP</a> to quickly inform us and add "
+"your +1 in case you come with company. "
+msgstr ""
+"Lo más importante es que nos avises si venís o no. Podés visitar la sección "
+"<a href=\"/rsvp\">RSVP</a> para confirmar tu presencia y agrear a tu +1 en "
+"caso de que vengas con compañía."
+
+#: templates/ourwedding/index.html:36
+msgid ""
+"You can also tell us a bit more of yourself my editing <a href=\"/me\">Your "
+"profile</a>.\n"
+"                    You can tell us about your dietary restrictions, update "
+"your phone number, etc. "
+msgstr ""
+"También podés compartirnos un poco más de tu información, editando <a href="
+"\"/me\">Tu Perfil</a>.Podrás decirnos sobre tus restricciones en la dieta, "
+"actualizar tu teléfono, etc."
+
+#: templates/ourwedding/index.html:38
+msgid ""
+"In case you have questions or comments, <a href=\"/contact\">contact us</a>, "
+"and we will\n"
+"                    both instantly receive your message."
+msgstr ""
+"En caso de que tengas preguntas o comentarios, <a href=\"/contact"
+"\">contactanos</a> y ambos recibiremos tu mensajeinstantáneamente."
+
+#: templates/ourwedding/index.html:40
+msgid "We hope to see you soon in Buenos Aires!"
+msgstr "Esperamos verte pronto en Buenos Aires!"
+
+#: templates/ourwedding/index.html:53
+msgid "Cordially Invited"
+msgstr "Cordialmente invitado"
+
+#: templates/ourwedding/index.html:54
+msgid ""
+"On the 19th of October, 2019, Estancia La Linda, Buenos Aires, Argentina."
+msgstr "El 19 de Octubre de 2019, Estancia La Linda, Buenos Aires, Argentina."
+
+#: templates/ourwedding/index.html:70
+msgid "Countdown until we are getting married!"
+msgstr "Cuenta regresiva para que nos casemos!"
+
+#: templates/ourwedding/index.html:74
+msgid "Days"
+msgstr "Días"
+
+#: templates/ourwedding/index.html:78
+msgid "Hours"
+msgstr "Horas"
+
+#: templates/ourwedding/index.html:82
+msgid "Minutes"
+msgstr "Minutos"
+
+#: templates/ourwedding/index.html:86
+msgid "Seconds"
+msgstr "Segundos"
+
+#: templates/ourwedding/index.html:89
+msgid "are remaining"
+msgstr "faltan"
+
+#: templates/ourwedding/login.html:11
+msgid "You need to log in in order to visit the website"
+msgstr "Necesitas ingresar la contraseña para visitar el sitio"
+
+#: templates/ourwedding/login.html:15
+msgid "Enter your access code:"
+msgstr "Ingresa el código de acceso"
+
+#: templates/ourwedding/login.html:19
+msgid "Access Code"
+msgstr "Código de acceso"
+
+#: templates/ourwedding/login.html:31
+msgid "Log In"
+msgstr "Ingresa"
+
+#: templates/ourwedding/login.html:37
+msgid "Request New Access Code:"
+msgstr "Pide un nuevo código de acceso"
+
+#: templates/ourwedding/login.html:43
+msgid "Request Code"
+msgstr "Pide un código nuevo"
+
+#: templates/ourwedding/login.html:46
+msgid "Or Register"
+msgstr "O regístrate"
+
+#: templates/ourwedding/login.html:47
+msgid "Get Help"
+msgstr "Ayuda"
+
+#: templates/ourwedding/messages.html:10
+msgid "No messages yet"
+msgstr "No hay mensajes aún"
+
+#: templates/ourwedding/messages.html:11 templates/ourwedding/messages.html:18
+msgid ""
+"This is a space for you to send us anecdotes! Are you remembering something "
+"fun that happened to Aquiles or Camila and you want to share with everyone? "
+"You can send us as many anecdotes as you want. Just click the button below :D"
+msgstr ""
+"Este es un espacio para que nos envíes anécdotas! Estás recordando algo "
+"divertido que le pasó a Aquiles o Camila, y quieres compartirlo con todos? "
+"Nos puedes enviar tantas anécdotas como quieras. Sólo has click en el botón "
+"debajo :D"
+
+#: templates/ourwedding/messages.html:21
+msgid "Sent on"
+msgstr "Enviado"
+
+#: templates/ourwedding/messages.html:31
+msgid "Create New"
+msgstr "Crear nuevo"
+
+#: templates/ourwedding/navbar.html:28
+msgid "My Profile"
+msgstr "Mi Perfil"
+
+#: templates/ourwedding/navbar.html:30
+msgid "Guest List"
+msgstr "Lista Invitados"
+
+#: templates/ourwedding/navbar.html:35
+msgid "Photos"
+msgstr "Fotos"
+
+#: templates/ourwedding/navbar.html:37
+msgid "Galleries"
+msgstr "Galerías"
+
+#: templates/ourwedding/navbar.html:39
+msgid "Send your photos"
+msgstr "Subí tus fotos!"
+
+#: templates/ourwedding/navbar.html:45
+msgid "Tourism"
+msgstr "Turismo"
+
+#: templates/ourwedding/navbar.html:47
+msgid "Buenos Aires"
+msgstr "Buenos Aires"
+
+#: templates/ourwedding/navbar.html:50
+msgid "Accomodation"
+msgstr "Alojamiento"
+
+#: templates/ourwedding/navbar.html:59
+msgid "Events"
+msgstr "Evento"
+
+#: templates/ourwedding/navbar.html:60
+msgid "Wedding"
+msgstr "Casamiento"
+
+#: templates/ourwedding/navbar.html:62
+msgid "Pre-Wedding"
+msgstr "Pre-casamiento"
+
+#: templates/ourwedding/new_message.html:9
+msgid "Contact Us"
+msgstr "Contacto"
+
+#: templates/ourwedding/new_message.html:10
+msgid "This is the best way of contacting us!"
+msgstr "Esta es la mejor forma de contactarnos"
+
+#: templates/ourwedding/pre_wedding.html:13
+msgid "Pre-Wedding Details"
+msgstr "Reunión Pre-Casamiento"
+
+#: templates/ourwedding/pre_wedding.html:27
+#: templates/ourwedding/wedding.html:32
+msgid "Location"
+msgstr "Lugar"
+
+#: templates/ourwedding/pre_wedding.html:30
+msgid ""
+"We are organizing a pre-wedding meet-up. We know a lot of people is coming "
+"from far away, and we would like to have the opportunity to meet you all!"
+msgstr ""
+"Estamos organizando un encuentro pre-casamiento. Sabemos que mucha genteestá "
+"viniendo desde lejos, y nos gustaría tener la oportunidad de encontrarnos "
+"con todos!"
+
+#: templates/ourwedding/profile.html:5
+msgid "Are you coming with someone else?"
+msgstr "¿Venís con alguien más?"
+
+#: templates/ourwedding/profile.html:6
+msgid "If you are coming with a partner or children, please also register them"
+msgstr "Si venís con una pareja o niños, por favor registrálos también."
+
+#: templates/ourwedding/profile.html:9
+msgid "Add People"
+msgstr "Agregar Personas"
+
+#: templates/ourwedding/profile_base.html:9
+#, python-format
+msgid "%(who)s's information"
+msgstr "Información de %(who)s"
+
+#: templates/ourwedding/profile_base.html:10
+msgid ""
+"Keep your contact information up to date so we can keep in touch with\n"
+"                        you."
+msgstr "Mantén tu información al día así podemos estar en contacto"
+
+#: templates/ourwedding/profile_base.html:18
+msgid "Update"
+msgstr "Actualizar"
+
+#: templates/ourwedding/register.html:16
+msgid "Register"
+msgstr "Registrarse"
+
+#: templates/ourwedding/register.html:17
+msgid ""
+"If you are seeing this is because we want you to come to our wedding,\n"
+"                                    but\n"
+"                                    we were missing some of your details."
+msgstr ""
+"Si estás viendo esto es porque querés venir a nuestro casamiento, pero nos "
+"faltan algunos de tus detalles."
+
+#: templates/ourwedding/register.html:20
+msgid ""
+"Please fill your information so you can enjoy the rest of the website\n"
+"                                    and\n"
+"                                    the big event!"
+msgstr ""
+"Por favor llena la información para que puedas disfrutar del resto del sitio "
+"web y del gran evento!"
+
+#: templates/ourwedding/register.html:23
+msgid ""
+"Even if you can't make it to the wedding, but would like to see the\n"
+"                                    photos, messages, etc. register to keep "
+"in touch."
+msgstr ""
+"Aunque no puedas venir a nuestro casamiento, pero te gustaría ver las fotos, "
+"los mensajes, etc. regístrate paraseguir en contacto"
+
+#: templates/ourwedding/register.html:31
+msgid "Send"
+msgstr "Enviar"
+
+#: templates/ourwedding/register.html:36
+msgid "Thank you"
+msgstr "Gracias"
+
+#: templates/ourwedding/register.html:37
+msgid "We will review the registration and let you know!"
+msgstr "Vamos a revisar la aplicación y te dejaremos saber"
+
+#: templates/ourwedding/tango.html:9
+msgid "Tango in Buenos Aires"
+msgstr "Tango en Buenos Aires"
+
+#: templates/ourwedding/tango.html:20
+msgid "Adding information soon!"
+msgstr "Más información en breve!"
+
+#: templates/ourwedding/wedding.html:13
+msgid "Wedding Details"
+msgstr "Detalles del Casamiento"
+
+#: templates/ourwedding/wedding.html:33
+msgid "The wedding will be held at <b>Estancia La Linda</b>"
+msgstr "La ceremonia se llevará a cabo en <b>Estancia La Linda</b>"
+
+#: templates/ourwedding/wedding.html:37
+msgid "Getting there and away"
+msgstr "Ir y volver de La Estancia"
+
+#: templates/ourwedding/wedding.html:39
+msgid ""
+"We are organizing transport to and from the venue. Vans will depart from the "
+"neighborhood of Palermo, very close to Ministro Carranza subway station at "
+"4pm (sharp!)."
+msgstr ""
+"Estamos organizando transporte para ir y venir del lugar de la fiesta.Combis "
+"van a salir del barrio del Palermo, muy cerca de la estación Ministro "
+"Carranzadel Subte D a las 4pm (en punto!)."
+
+#: templates/ourwedding/wedding.html:42
+msgid ""
+"If you would like to make use of the vans, we kindly ask you to visit <a "
+"href='/me'>your profile</a> and select the option. This will help us keep "
+"track of the amount of people who need the vans."
+msgstr ""
+"Si te gustaría usar las combis, te pedimos amablemente que visites <a href='/"
+"me'>tu perfil</a> y elijas la opción. Esto nos ayudará a mantener un "
+"registro de la cantidad de personas que necesitan las combis."
+
+#: templates/ourwedding/wedding.html:44
+msgid ""
+"Moreover, if you check the guest list, you may find people who come by car. "
+"If you know them, you may arrange to go together!"
+msgstr ""
+"Además, si te fijás en la lista de invitados, podrás ver quiénes vienen con "
+"auto, y si son conocidos, les podés pedir de venir juntos!"
+
+#: templates/ourwedding/wedding.html:45
+msgid "The Ceremony"
+msgstr "Casamiento"
+
+#: templates/ourwedding/wedding.html:46
+msgid "We are going to hold a symbolic ceremony, officiated by a friend."
+msgstr "Vamos a celebrar una ceremonia simbólica, oficiada por un amigo."
+
+#: templates/ourwedding/wedding.html:47
+msgid ""
+"As you may imagine, legally speaking for us is more convenient to get "
+"legally married in The Netherlands."
+msgstr ""
+"Como podrás imaginar, legalmente hablando es más conveniente para "
+"nosotroscasarnos en Holanda."
+
+#: templates/ourwedding/wedding.html:48
+msgid "If you would like to say some words, contact us!"
+msgstr "Si te gustaría decir algunas palabras, contactanos!"
+
+#: templates/ourwedding/wedding.html:49
+msgid "Gift"
+msgstr "Regalo"
+
+#: templates/ourwedding/wedding.html:50
+msgid ""
+"A lot of people asked us about what to do with the gift. We thank you all "
+"for your good intentions!"
+msgstr ""
+"Varias personas nos preguntaron qué hacer con el regalo. Les agradecemos a "
+"todos por las buenas intenciones!"
+
+#: templates/ourwedding/wedding.html:51
+msgid ""
+"If you really want to give us something, you can do it during the wedding "
+"party."
+msgstr "Si realmente nos querés dar algo, lo podrás hacer durante la fiesta."
+
+#: templates/ourwedding/wedding.html:52
+msgid ""
+"If it is a physical present, bear in mind that we have limited space in our "
+"luggage when we go back home."
+msgstr ""
+"Si es un regalo físico, tené en cuenta que nuestro espacio es limitado "
+"cuando volvamos a casa."
+
+#: templates/ourwedding/wedding.html:53
+msgid ""
+"If you would like to give us money, please exchange it to either US dollars "
+"or Euros."
+msgstr "Si te gustaría darnos dinero, por favor cambialo a dólares o euros"
+
+#: templates/ourwedding/wedding.html:55
+msgid "The Menu"
+msgstr "El Menú"
+
+#: templates/ourwedding/wedding.html:56
+msgid ""
+"We are closing down the options on the menu, we will update here once we "
+"know it!"
+msgstr ""
+"Estamos ultimando los detalles del menu. Cuando lo tengamos decidido vamos a "
+"actualizar este espacio."
+
+#: templates/ourwedding/wedding.html:57
+msgid "The Party"
+msgstr "La Fiesta"
+
+#: templates/ourwedding/wedding.html:58
+msgid ""
+"We are finishing the details of the party. We will update as soon as we can!"
+msgstr ""
+"Estamos terminando los detalles de la fiesta. Vamos a actualizar la "
+"información apenas podamos!"
+
+#: templates/photos/galleries.html:13
+msgid "Photos by "
+msgstr "Fotos de"
+
+#: templates/photos/gallery.html:11
+msgid "Image Gallery by"
+msgstr "Galería de"
+
+#: templates/photos/upload.html:6
+msgid "Upload your photos!"
+msgstr "Subí tus fotos!"
+
+#: templates/photos/upload.html:7
+msgid "Help us make the best photo/video album!"
+msgstr "Ayudanos a hacer el mejor álbum de fotos!"
+
+#: templates/photos/upload.html:9
+msgid ""
+"You can send us your short video sending greetings, old photos, new photos, "
+"it's up to\n"
+"                    you! We want to have a nice memory of our guests and the "
+"people who can't make it to the wedding.\n"
+"                "
+msgstr ""
+"Nos podés mandar un video corto con tus saludos, fotos viejas, nuevas, lo "
+"que quieras! Queremos tener un lindo recuerdo de nuestros invitados y de la "
+"gente que no pudo venir a la fiesta."
+
+#: templates/photos/upload.html:12
+msgid ""
+"You can upload as many photos or videos as you want! Just select them all "
+"and click\n"
+"                    upload!                "
+msgstr ""
+"Podés subir tantas fotos o videos como quieras! Simplemente selecciona todos "
+"y apretá el botón subir"
+
+#: templates/savethedate/base.html:39
+msgid "Cami y Aqui - Wedding 2019"
+msgstr "Cami y Aqui - Casamiento 2019"

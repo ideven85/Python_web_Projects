@@ -1,0 +1,16 @@
+Hola {{ guest.user.first_name }},
+
+Para acceder a nuestro sitio, por favor usa el siguiente link:
+
+{{ domain }}/login?access_code={{ token }}
+
+O ingresa el siguiente código:
+
+{{ token }}
+
+También tenemos una app para teléfonos Android que está disponible en:
+
+https://play.google.com/store/apps/details?id=com.uetke.camiyaqui
+
+Nos vemos pronto!
+Aquiles & Camila

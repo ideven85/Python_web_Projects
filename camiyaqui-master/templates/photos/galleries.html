@@ -1,0 +1,22 @@
+{% extends 'ourwedding/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+    <section class="act_area p_120">
+        <div class="container">
+            <div class="row act_inner">
+                {% for gallery in galleries %}
+                    <div class="col-lg-4">
+                        <div class="progress_item">
+                            <img class="img-fluid" src="{{ gallery.preview }}" alt="">
+                            <div class="progress_text">
+                                <a href="{% url 'gallery' gallery.owner.pk %}"><h4>{% trans 'Photos by ' %}{{ gallery.owner.profile }}</h4></a>
+                                <p>&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

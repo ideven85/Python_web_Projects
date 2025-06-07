@@ -8,5 +8,6 @@ class CommentForm(forms.ModelForm):
         fields = ["name", "email", "body", "active"]
 
 
+#todo
 class SearchForm(forms.Form):
     query = forms.CharField()

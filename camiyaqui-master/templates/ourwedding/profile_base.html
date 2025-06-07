@@ -1,0 +1,26 @@
+{% extends 'ourwedding/base.html' %}
+{% load i18n %}
+{% block content %}
+    <section class="reservation_form_area p_120">
+        <div class="container">
+            <div class="res_form_inner">
+            {% block form-title %}
+                <div class="form_title">
+                    <h2>{% blocktrans with who=guest.user.first_name %}{{ who }}'s information{% endblocktrans %}</h2>
+                    <p>{% blocktrans %}Keep your contact information up to date so we can keep in touch with
+                        you.{% endblocktrans %}</p>
+                </div>
+            {% endblock %}
+                <form class="reservation_form row"  method="post" id="contactForm"
+                      novalidate="novalidate">
+                    {% csrf_token %}
+                    {% include 'includes/form.html' %}
+                    <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">{% trans "Update" %}
+                    </button>
+                </form>
+            </div>
+            {% block profile_extras %}
+            {% endblock %}
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'ourwedding/base.html' %}
+{% load i18n %}
+{% block navbar %}
+{% endblock %}
+{% block footer %}
+{% endblock %}
+{% block content %}
+    <section class="section mt-5">
+        <div class="container">
+            <div class="main_title">
+                <h2>{% trans "You need to log in in order to visit the website" %}</h2>
+            </div>
+            <div class="row mb-5">
+                <div class="col-lg-5 mx-3 journey_item border py-3">
+                    <h3 class="mb-30 title_color">{% trans "Enter your access code:" %}</h3>
+                    <form method="get" novalidate>
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" name="access_code" placeholder="{% trans "Access Code" %}"
+                                   onfocus="this.placeholder = ''"
+                                   onblur="this.placeholder = 'Access Code'" required="" class="form-control single-input {% if secret_form.access_code.errors %}is-invalid{% endif %}"
+                                   style="margin-bottom: 15px;">
+                            {% if secret_form.access_code.errors %}
+                                {% for error in secret_form.access_code.errors %}
+                                    <div class="invalid-feedback">
+                                        {{ error }}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                        <button class="btn genric-btn success circle" type="submit">{% trans "Log In" %}
+                        </button>
+                        <input name="next" value="{{ secret_form.next.value }}" type="hidden">
+                    </form>
+                </div>
+                <div class="col-lg-5 mx-3 journey_item border py-3">
+                    <h3 class="mb-30 title_color">{% trans "Request New Access Code:" %}</h3>
+                    <form action="{% url 'guest-login' %}" method="post">
+                        {% csrf_token %}
+                        <input type="email" name="email" placeholder="Your Email" onfocus="this.placeholder = ''"
+                               onblur="this.placeholder = 'Your Email'" required="" class="single-input"
+                               style="margin-bottom: 15px;">
+                        <button class="btn genric-btn success circle" type="submit">{% trans "Request Code" %}
+                        </button>
+                    </form>
+                    <h4 class="mt-30 title_color"><a href="{% url 'guest-register' %}">{% trans "Or Register" %}</a></h4>
+                    <h4 class="mt-30 title_color"><a href="{% url 'help' %}">{% trans 'Get Help' %}</a></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

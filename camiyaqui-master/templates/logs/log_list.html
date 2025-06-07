@@ -1,0 +1,26 @@
+{% extends 'base_backend.html' %}
+{% block body %}
+    <div class="container">
+        <div class="row mt-3">
+            <h1>List of Logs</h1>
+            <div class="col-md-10">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>Type</td>
+                            <td>Time</td>
+                        </tr>
+                    </thead>
+                    {% for log in logs %}
+                        <tr>
+                        <td>{{ log.pk }}</td>
+                        <td>{{ log.get_type_display }}</td>
+                        <td>{{ log.timestamp|date }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

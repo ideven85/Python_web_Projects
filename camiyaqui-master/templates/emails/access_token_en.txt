@@ -1,0 +1,16 @@
+Dear {{ guest.user.first_name }},
+
+To access our wedding website, please use the following link:
+
+{{ domain }}/login?access_code={{ token }}
+
+Or use this code:
+
+{{ token }}
+
+We also have an app for Android phones, which is accessible at:
+
+https://play.google.com/store/apps/details?id=com.uetke.camiyaqui
+
+See you soon!
+Aquiles & Camila

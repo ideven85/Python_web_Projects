@@ -1,0 +1,39 @@
+{% extends 'ourwedding/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+    <!--================Home Banner Area =================-->
+    <section class="banner_area">
+        <div class="banner_inner banner_box d-flex align-items-center">
+            <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0"
+                 data-background=""></div>
+            <div class="container">
+                <div class="banner_content text-center">
+                    <h2>{% trans "Pre-Wedding Details" %}</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================End Home Banner Area =================-->
+
+    <!--================Blog Area =================-->
+    <section class="blog_area single-post-area p_120">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 posts-list">
+                    <div class="single-post row">
+                        <div class="col blog_details">
+                            <h2>{% trans "Location" %}</h2>
+                            <p>Av. Santa Fe 5183 (Palermo)</p>
+                            <p>
+                                {% trans "We are organizing a pre-wedding meet-up. We know a lot of people is coming from far away, and we would like to have the opportunity to meet you all!" %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Blog Area =================-->
+{% endblock %}
