@@ -43,5 +43,8 @@ venv*
 tags
 htmlcov
 *.swp
-
+.idea/
+.venv/
+static/
+templates/
 node_modules
