@@ -42,6 +42,7 @@ class Item(Base, ItemBase, table=True):
     __tablename__ = "items"
 
 
+#Item create or update
 class ItemCreate(ItemBase):
     pass
 

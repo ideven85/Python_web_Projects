@@ -1,3 +1,5 @@
+from typing import List
+
 import sqlmodel
 from fastapi import FastAPI, Depends, HTTPException, status
 from sqlmodel import Session, select
@@ -10,6 +12,9 @@ from fastapi import FastAPI
 from sqlmodel import SQLModel
 from db import engine
 import models  # CRITICAL: Must be imported so SQLModel registers your table=True classes
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi import Query
+
 
 
 @asynccontextmanager
@@ -23,6 +28,19 @@ async def lifespan(app: FastAPI):
 app = FastAPI(lifespan=lifespan)
 
 
+origins = [
+    "http://localhost:5173",
+    "localhost:5173"
+]
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 @app.get("/")
 def home():
     return RedirectResponse(url="/docs")
@@ -36,8 +54,16 @@ def create_or_update_item(item:ItemCreate, session:Session = Depends(get_session
     session.commit()
     session.refresh(db_item)
     return db_item
+@app.get("/items", response_model=List[ItemResponse])
+def get_all_items(
+    offset: int = 0,
+    limit: int = Query(default=100, le=100),
+    session: Session = Depends(get_session),
+):
+    items = session.exec(select(Item).offset(offset).limit(limit)).all()
+    return items
 
-@app.get("/item/{item_id}", response_model=ItemResponse)
+@app.get("/items/{item_id}", response_model=ItemResponse)
 def get_an_item(item_id: int, session: Session = Depends(get_session)):
     item = session.get(Item, item_id)
     if not item:
